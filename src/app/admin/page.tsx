@@ -103,7 +103,7 @@ export default function CruiseListPage() {
               <h1 className="text-3xl font-bold text-gray-900">크루즈 정보 관리</h1>
               <p className="text-gray-600 mt-2">등록된 크루즈 객실 정보를 조회하고 관리합니다</p>
               {currentUser && (
-                <p className="text-sm text-blue-600 mt-1">
+                <p className="text-sm text-blue-500 mt-1">
                   로그인: {currentUser.name} ({currentUser.role === 'admin' ? '관리자' : '매니저'})
                 </p>
               )}
@@ -111,7 +111,7 @@ export default function CruiseListPage() {
             <div className="flex gap-4">
               <Link
                 href="/admin/cruise-input"
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
               >
                 새 크루즈 등록
               </Link>
@@ -121,12 +121,6 @@ export default function CruiseListPage() {
               >
                 로그아웃
               </button>
-              <Link
-                href="/"
-                className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-              >
-                메인으로
-              </Link>
             </div>
           </div>
         </div>
@@ -145,7 +139,7 @@ export default function CruiseListPage() {
                 id="categoryFilter"
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
               >
                 <option value="">전체</option>
                 {uniqueCategories.map(category => (
@@ -161,7 +155,7 @@ export default function CruiseListPage() {
                 id="cruiseNameFilter"
                 value={selectedCruiseName}
                 onChange={(e) => setSelectedCruiseName(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
               >
                 <option value="">전체</option>
                 {uniqueCruiseNames.map(name => (
@@ -190,7 +184,7 @@ export default function CruiseListPage() {
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-lg shadow-sm p-6">
             <div className="flex items-center">
-              <div className="p-3 rounded-full bg-blue-100 text-blue-600">🚢</div>
+              <div className="p-3 rounded-full bg-blue-200 text-blue-500">🚢</div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">전체 객실</p>
                 <p className="text-2xl font-bold text-gray-900">{cruises.length}</p>
@@ -301,7 +295,7 @@ export default function CruiseListPage() {
                     cruises.map((cruise) => (
                       <tr key={cruise.id} className="hover:bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-200 text-blue-700">
                             {cruise.category}
                           </span>
                         </td>
@@ -325,7 +319,7 @@ export default function CruiseListPage() {
                             {cruise.roomDescription || '-'}
                           </div>
                           {cruise.roomUrl && (
-                            <div className="text-xs text-blue-600 mt-1">
+                            <div className="text-xs text-blue-500 mt-1">
                               <a href={cruise.roomUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
                                 {cruise.roomUrl}
                               </a>
@@ -338,7 +332,7 @@ export default function CruiseListPage() {
                         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                           <Link
                             href={`/admin/cruise-edit?id=${cruise.id}`}
-                            className="text-blue-600 hover:text-blue-900"
+                            className="text-blue-500 hover:text-blue-800"
                           >
                             수정
                           </Link>

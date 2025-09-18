@@ -7,9 +7,9 @@ export default function Footer() {
             <h4 className="text-xl font-bold text-white mb-4">스테이하롱</h4>
             <p className="text-sm leading-relaxed mb-4">하롱베이 현지 전문 한국 여행사로, 안전하고 특별한 베트남 여행을 제공합니다.</p>
             <div className="flex space-x-3">
-              <span className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-xs cursor-pointer">f</span>
-              <span className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-xs cursor-pointer">K</span>
-              <span className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-xs cursor-pointer">N</span>
+              <span className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-xs cursor-pointer">f</span>
+              <span className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-xs cursor-pointer">K</span>
+              <span className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-xs cursor-pointer">N</span>
             </div>
           </div>
           <div>

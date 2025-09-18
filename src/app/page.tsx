@@ -21,7 +21,7 @@ export default function HomePage() {
       subtitle: `${categories.length}가지 옵션 · ${cruiseInfos.length}개 객실`,
       description: "세계자연유산 하롱베이에서 즐기는 프리미엄 크루즈 여행",
       icon: "🚢",
-      color: "from-blue-600 to-cyan-600",
+      color: "from-blue-500 to-cyan-500",
       href: "/cruises",
       features: ["럭셔리 크루즈", "부티크 크루즈", "데이 크루즈"]
     },
@@ -31,7 +31,7 @@ export default function HomePage() {
       subtitle: "하노이 공항 ↔ 하롱베이",
       description: "안전하고 편안한 전용 차량 서비스",
       icon: "🚗",
-      color: "from-green-600 to-emerald-600", 
+      color: "from-green-500 to-emerald-500", 
       href: "/services/airport-transfer",
       features: ["전용 차량", "한국어 가이드", "24시간 서비스"]
     },
@@ -41,7 +41,7 @@ export default function HomePage() {
       subtitle: "베트남 전문 가이드",
       description: "현지 전문가와 함께하는 맞춤형 베트남 여행",
       icon: "👨‍🏫",
-      color: "from-purple-600 to-pink-600",
+      color: "from-purple-500 to-pink-500",
       href: "/services/korean-guide", 
       features: ["전문 가이드", "맞춤형 일정", "문화 체험"]
     },
@@ -66,19 +66,16 @@ export default function HomePage() {
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-full text-sm font-medium mb-6">
               <span>🇻🇳</span>
-              하롱베이 현지 전문 한국 여행사
+              하롱베이 현지 전문 유일 한국인 여행사
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="block">스테이하롱</span>
               <span className="block text-cyan-200">Stay Halong</span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              2023년부터 하롱베이 현지에서 한국 여행객을 위한 전문 서비스를 제공하는 
-              현지 베트남 여행사입니다.
-            </p>
+            
             <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-100 mb-10">
               <span className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
-                <span className="text-green-400">✓</span> 현지 전문가 운영
+                <span className="text-green-400">✓</span> 현지 한국인 전문가 운영
               </span>
               <span className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
                 <span className="text-green-400">✓</span> 한국어 완벽 지원
@@ -439,26 +436,6 @@ export default function HomePage() {
                 <li>📍 하롱시, 베트남</li>
                 <li>🏢 사업자번호: 2500707601</li>
               </ul>
-              <div className="mt-6 pt-4 border-t border-gray-700">
-                <h6 className="font-bold text-white mb-3">관리자</h6>
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <Link href="/admin/login" className="hover:text-blue-400 transition-colors">
-                      🔐 관리자 로그인
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/admin" className="hover:text-blue-400 transition-colors">
-                      📊 크루즈 정보 관리
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/admin/cruise-input" className="hover:text-blue-400 transition-colors">
-                      ➕ 크루즈 정보 등록
-                    </Link>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 mt-8 text-center text-sm">

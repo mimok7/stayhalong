@@ -63,13 +63,6 @@ export default function CalistaOneNightPage() {
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-900 via-blue-700 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="flex items-center gap-4 mb-4">
-            <Link href="/cruises/1-night-2-days" className="text-blue-200 hover:text-white">
-              ← 1박2일 크루즈 목록
-            </Link>
-            <span className="text-blue-200">|</span>
-            <span className="text-sm text-blue-200">Calista Cruise</span>
-          </div>
           <h1 className="text-4xl font-bold mb-2">{cruiseData.name}</h1>
           <p className="text-xl text-blue-100">
             1박 2일 럭셔리 크루즈 여행
@@ -106,8 +99,8 @@ export default function CalistaOneNightPage() {
               <div className="border-t pt-6">
                 <div className="flex justify-between items-center">
                   <div>
-                    <span className="text-gray-400 line-through text-lg">${cruiseData.originalPrice}</span>
-                    <span className="text-3xl font-bold text-blue-600 ml-2">${cruiseData.currentPrice}</span>
+                    <span className="text-gray-400 line-through text-lg">{cruiseData.originalPrice} VND</span>
+                    <span className="text-3xl font-bold text-blue-600 ml-2">{cruiseData.currentPrice} VND</span>
                     <span className="text-gray-600">/인</span>
                   </div>
                   <span className="bg-red-100 text-red-800 px-3 py-1 rounded text-sm font-medium">

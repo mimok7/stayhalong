@@ -7,7 +7,7 @@ export default function ServiceCard({
   title,
   subtitle,
   icon,
-  color = "from-blue-600 to-cyan-600",
+  color = "from-blue-500 to-cyan-500",
   features = [] as string[],
 }: {
   href: string;
@@ -39,7 +39,7 @@ export default function ServiceCard({
           ))}
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-blue-600 font-medium group-hover:text-blue-700">자세히 보기 →</span>
+          <span className="text-blue-500 font-medium group-hover:text-blue-600">자세히 보기 →</span>
         </div>
       </div>
     </Link>

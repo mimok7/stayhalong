@@ -53,13 +53,6 @@ export default function DayCruisesPage() {
       {/* Header */}
       <header className="bg-gradient-to-r from-green-900 via-green-700 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="flex items-center gap-4 mb-4">
-            <Link href="/" className="text-green-200 hover:text-white">
-              ← 홈으로 돌아가기
-            </Link>
-            <span className="text-green-200">|</span>
-            <span className="text-sm text-green-200">크루즈 상품</span>
-          </div>
           <h1 className="text-4xl font-bold mb-2">원데이 크루즈 상품</h1>
           <p className="text-xl text-green-100">
             하롱베이의 아름다움을 하루 만에 경험하는 당일 크루즈 투어
@@ -96,8 +89,8 @@ export default function DayCruisesPage() {
                 </p>
                 <div className="flex justify-between items-center mb-3">
                   <div>
-                    <span className="text-gray-400 line-through text-sm">${cruise.originalPrice}</span>
-                    <span className="text-xl font-bold text-green-600 ml-1">${cruise.currentPrice}</span>
+                    <span className="text-gray-400 line-through text-sm">${cruise.originalPrice} VND</span>
+                    <span className="text-xl font-bold text-green-600 ml-1">${cruise.currentPrice} VND</span>
                     <span className="text-gray-600 text-sm">/인</span>
                   </div>
                   <div className="text-right">

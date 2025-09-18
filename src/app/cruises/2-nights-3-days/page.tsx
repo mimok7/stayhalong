@@ -56,13 +56,6 @@ export default function TwoNightsThreeDaysPage() {
       {/* Header */}
       <header className="bg-gradient-to-r from-purple-900 via-purple-700 to-pink-600 text-white">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="flex items-center gap-4 mb-4">
-            <Link href="/" className="text-purple-200 hover:text-white">
-              ← 홈으로 돌아가기
-            </Link>
-            <span className="text-purple-200">|</span>
-            <span className="text-sm text-purple-200">크루즈 상품</span>
-          </div>
           <h1 className="text-4xl font-bold mb-2">2박 3일 크루즈 상품</h1>
           <p className="text-xl text-purple-100">
             하롱베이를 여유롭게 즐길 수 있는 프리미엄 2박 3일 크루즈 여행
@@ -99,8 +92,8 @@ export default function TwoNightsThreeDaysPage() {
                 </p>
                 <div className="flex justify-between items-center mb-4">
                   <div>
-                    <span className="text-gray-400 line-through">${cruise.originalPrice}</span>
-                    <span className="text-2xl font-bold text-purple-600 ml-2">${cruise.currentPrice}</span>
+                    <span className="text-gray-400 line-through">${cruise.originalPrice} VND</span>
+                    <span className="text-2xl font-bold text-purple-600 ml-2">${cruise.currentPrice} VND</span>
                     <span className="text-gray-600">/인</span>
                   </div>
                   <div className="text-right">

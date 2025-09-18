@@ -4,7 +4,9 @@
   "description": "하롱베이 현지 전문 한국 여행사 스테이하롱의 크루즈 정보 관리 시스템",
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:fast": "node scripts/dev-fast.js",
     "build": "next build --turbopack",
+    "build:quick": "next build --no-lint",
     "start": "next start",
     "lint": "eslint",
     "create-route": "node ./scripts/create-route.cjs",

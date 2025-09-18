@@ -38,13 +38,6 @@ export default function AirportTransferPage() {
       {/* Header */}
       <header className="bg-gradient-to-r from-orange-900 via-orange-700 to-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="flex items-center gap-4 mb-4">
-            <Link href="/" className="text-orange-200 hover:text-white">
-              ← 홈으로 돌아가기
-            </Link>
-            <span className="text-orange-200">|</span>
-            <span className="text-sm text-orange-200">서비스</span>
-          </div>
           <h1 className="text-4xl font-bold mb-2">공항 픽업/샌딩 서비스</h1>
           <p className="text-xl text-orange-100">
             하노이 공항에서 크루즈 선착장까지 안전하고 편안한 이동
@@ -62,7 +55,7 @@ export default function AirportTransferPage() {
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <span className="bg-white text-orange-800 px-3 py-1 rounded-full text-sm font-bold">
-                    ${service.price}/인
+                    ${service.price} VND/인
                   </span>
                 </div>
               </div>

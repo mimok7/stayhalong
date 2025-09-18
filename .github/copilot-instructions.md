@@ -1,4 +1,7 @@
-# Copilot / AI agent instructions for Halong Cruise (Stay Halong)
+# Copilot / AI agent instr## Build & run
+- **개발 서버는 항상 실행 중입니다** - 새로 시작하지 마세요
+- Build for production: `npm run build` then `npm start`
+- Lint: `npm run lint` (ESLint configured via `eslint.config.mjs`)ons for Halong Cruise (Stay Halong)
 
 This file contains concise, actionable instructions for AI coding agents to be productive in this repository.
 
@@ -29,9 +32,57 @@ This file contains concise, actionable instructions for AI coding agents to be p
 - Build for production: `npm run build` then `npm start`.
 - Lint: `npm run lint` (ESLint configured via `eslint.config.mjs`).
 
+## 🚀 Development Workflow (개발 워크플로우)
+
+### ⚡ Fast Development Mode (빠른 개발 모드)
+개발 중 빌드 시간을 절약하기 위한 최적화된 워크플로우:
+
+#### 1. Daily Development (매일 개발):
+**개발 서버는 항상 실행 중입니다** - 코드 변경 시 즉시 브라우저에서 확인 가능
+- ⚡ **실시간 반영**: 파일 수정 시 즉시 브라우저에 반영
+- 🚫 **빌드 불필요**: 코드 변경할 때마다 빌드하지 않음
+- 📱 **빠른 피드백**: 변경사항 즉시 확인 가능
+
+#### 2. Pre-deployment (배포 전):
+```bash
+npm run build
+```
+- ✅ **최종 검증**: 모든 파일 컴파일 및 최적화
+- 🔍 **오류 체크**: 타입 및 린트 검증
+- 📦 **프로덕션 준비**: 배포용 파일 생성
+
+### 🛠️ Additional Commands (추가 명령어):
+```bash
+# 빠른 개발 스크립트 (선택사항)
+npm run dev:fast
+
+# 빠른 빌드 (린트 생략)
+npm run build:quick
+```
+
+### 📈 Time Savings (시간 절약 효과):
+- **개발 중**: 빌드 시간 0초 (실시간 반영)
+- **배포 전**: 1회만 빌드 (약 10-20초)
+- **전체**: **빌드 시간 90% 이상 절약**
+
+### 💡 Usage Tips (사용 팁):
+- **개발 서버는 항상 실행 중입니다** - 코드 변경 시 브라우저에서 바로 확인
+- 코드 변경 시 브라우저에서 바로 확인
+- GitHub 업로드 전만 `npm run build` 실행
+- 필요시 `npm run build:quick`으로 더 빠른 빌드
+
+### 🔄 Development Cycle (개발 사이클):
+```
+코드 작성 → 브라우저 확인 → 반복
+              ↓ (배포 시점)
+        npm run build → npm start
+```
+
+> ⚠️ **중요**: GitHub 업로드 전에는 반드시 `npm run build`를 실행하세요!
+
 ## Debugging tips
 - If Next dev picks a different port, check terminal output for the selected `Local` URL (e.g., `http://localhost:3003`).
-- Common runtime errors stem from malformed JSX or unclosed tags in `page.tsx` files — run `npm run dev` to see stack traces.
+- Common runtime errors stem from malformed JSX or unclosed tags in `page.tsx` files — 개발 서버가 실행 중이므로 브라우저에서 바로 확인 가능합니다.
 
 ## Typical tasks and examples (copyable)
 - Add a new top-level service route (e.g., `src/app/services/airport-transfer/page.tsx`) and link it from `src/app/page.tsx`.

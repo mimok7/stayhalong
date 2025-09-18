@@ -47,13 +47,6 @@ export default function KoreanGuidePage() {
       {/* Header */}
       <header className="bg-gradient-to-r from-indigo-900 via-indigo-700 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="flex items-center gap-4 mb-4">
-            <Link href="/" className="text-indigo-200 hover:text-white">
-              ← 홈으로 돌아가기
-            </Link>
-            <span className="text-indigo-200">|</span>
-            <span className="text-sm text-indigo-200">서비스</span>
-          </div>
           <h1 className="text-4xl font-bold mb-2">한국어 가이드 투어</h1>
           <p className="text-xl text-indigo-100">
             전문 한국어 가이드와 함께하는 베트남 여행
@@ -71,7 +64,7 @@ export default function KoreanGuidePage() {
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <span className="bg-white text-indigo-800 px-3 py-1 rounded-full text-sm font-bold">
-                    ${tour.price}/인
+                    ${tour.price} VND/인
                   </span>
                 </div>
               </div>

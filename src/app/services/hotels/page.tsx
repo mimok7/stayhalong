@@ -9,7 +9,7 @@ export default function HotelsPage() {
       name: "하노이 럭셔리 호텔",
       location: "하노이 시내",
       category: "5성급",
-      priceRange: "$150-300",
+      priceRange: "1,500,000-3,000,000 VND",
       rating: 4.8,
       reviews: 1250,
       description: "하노이 시내 중심에 위치한 최고급 호텔로 공항과 가까운 편리한 위치",
@@ -21,7 +21,7 @@ export default function HotelsPage() {
       name: "하노이 부티크 호텔",
       location: "옛 거리 인근",
       category: "4성급",
-      priceRange: "$80-150",
+      priceRange: "800,000-1,500,000 VND",
       rating: 4.6,
       reviews: 890,
       description: "전통과 현대가 조화를 이루는 부티크 호텔로 하노이의 문화를 체험하기에 최적",
@@ -33,7 +33,7 @@ export default function HotelsPage() {
       name: "하롱베이 리조트",
       location: "하롱베이",
       category: "5성급",
-      priceRange: "$200-400",
+      priceRange: "2,000,000-4,000,000 VND",
       rating: 4.9,
       reviews: 650,
       description: "하롱베이의 아름다운 바다를 바라보며 휴식할 수 있는 프리미엄 리조트",
@@ -45,7 +45,7 @@ export default function HotelsPage() {
       name: "하롱베이 가성비 호텔",
       location: "하롱 시내",
       category: "3성급",
-      priceRange: "$40-80",
+      priceRange: "400,000-800,000 VND",
       rating: 4.2,
       reviews: 1200,
       description: "합리적인 가격에 깨끗하고 편안한 시설을 제공하는 실용적인 호텔",
@@ -59,13 +59,6 @@ export default function HotelsPage() {
       {/* Header */}
       <header className="bg-gradient-to-r from-pink-900 via-pink-700 to-rose-600 text-white">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="flex items-center gap-4 mb-4">
-            <Link href="/" className="text-pink-200 hover:text-white">
-              ← 홈으로 돌아가기
-            </Link>
-            <span className="text-pink-200">|</span>
-            <span className="text-sm text-pink-200">서비스</span>
-          </div>
           <h1 className="text-4xl font-bold mb-2">베트남 호텔 예약</h1>
           <p className="text-xl text-pink-100">
             하노이와 하롱베이의 검증된 호텔을 특별가로 예약하세요
