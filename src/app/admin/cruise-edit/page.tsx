@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { getCurrentUser, redirectToLogin } from "../../../lib/auth";
@@ -27,7 +27,7 @@ const initialFormData: CruiseFormData = {
   roomUrl: "",
 };
 
-export default function CruiseEditPage() {
+function CruiseEditForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const cruiseId = searchParams.get('id');
@@ -86,7 +86,7 @@ export default function CruiseEditPage() {
           text: "크루즈 정보를 불러올 수 없습니다."
         });
       }
-    } catch (error) {
+    } catch (_error) {
       setSubmitMessage({
         type: "error",
         text: "데이터 로딩 중 오류가 발생했습니다."
@@ -145,7 +145,7 @@ export default function CruiseEditPage() {
           text: error.error || "저장 중 오류가 발생했습니다."
         });
       }
-    } catch (error) {
+    } catch (_error) {
       setSubmitMessage({
         type: "error",
         text: "네트워크 오류가 발생했습니다."
@@ -424,5 +424,20 @@ export default function CruiseEditPage() {
         </div>
       </main>
     </div>
+  );
+}
+
+export default function CruiseEditPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin text-4xl mb-4">⏳</div>
+          <p className="text-gray-600">페이지를 불러오는 중...</p>
+        </div>
+      </div>
+    }>
+      <CruiseEditForm />
+    </Suspense>
   );
 }

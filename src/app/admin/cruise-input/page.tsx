@@ -88,7 +88,7 @@ export default function CruiseInputPage() {
           text: error.error || "저장 중 오류가 발생했습니다."
         });
       }
-    } catch (error) {
+    } catch (_error) {
       setSubmitMessage({
         type: "error",
         text: "네트워크 오류가 발생했습니다."

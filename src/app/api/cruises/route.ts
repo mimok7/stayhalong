@@ -4,8 +4,7 @@ import {
   getCruiseInfoById,
   addCruiseInfo,
   updateCruiseInfo,
-  deleteCruiseInfo,
-  CruiseInfo
+  deleteCruiseInfo
 } from '../../../data/cruises';
 
 // GET /api/cruises - 모든 크루즈 정보 조회 또는 카테고리별 조회

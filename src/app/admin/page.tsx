@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { CruiseInfo } from "../../data/cruises";
-import { getCurrentUser, logout, redirectToLogin } from "../../lib/auth";
+import { getCurrentUser, logout, redirectToLogin, User } from "../../lib/auth";
 
 export default function CruiseListPage() {
   const [cruises, setCruises] = useState<CruiseInfo[]>([]);
@@ -12,8 +12,35 @@ export default function CruiseListPage() {
   const [error, setError] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [selectedCruiseName, setSelectedCruiseName] = useState<string>("");
-  const [currentUser, setCurrentUser] = useState<any>(null);
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
   const router = useRouter();
+
+  const fetchCruises = useCallback(async () => {
+    try {
+      setLoading(true);
+      let url = "/api/cruises";
+      const params = new URLSearchParams();
+
+      if (selectedCategory) params.append("category", selectedCategory);
+      if (selectedCruiseName) params.append("cruiseName", selectedCruiseName);
+
+      if (params.toString()) {
+        url += "?" + params.toString();
+      }
+
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = await response.json();
+        setCruises(data);
+      } else {
+        setError("데이터를 불러오는데 실패했습니다.");
+      }
+    } catch (_err) {
+      setError("네트워크 오류가 발생했습니다.");
+    } finally {
+      setLoading(false);
+    }
+  }, [selectedCategory, selectedCruiseName]);
 
   // 페이지 타이틀 설정
   useEffect(() => {
@@ -35,34 +62,7 @@ export default function CruiseListPage() {
     if (currentUser) {
       fetchCruises();
     }
-  }, [selectedCategory, selectedCruiseName, currentUser]);
-
-  const fetchCruises = async () => {
-    try {
-      setLoading(true);
-      let url = "/api/cruises";
-      const params = new URLSearchParams();
-
-      if (selectedCategory) params.append("category", selectedCategory);
-      if (selectedCruiseName) params.append("cruiseName", selectedCruiseName);
-
-      if (params.toString()) {
-        url += "?" + params.toString();
-      }
-
-      const response = await fetch(url);
-      if (response.ok) {
-        const data = await response.json();
-        setCruises(data);
-      } else {
-        setError("데이터를 불러오는데 실패했습니다.");
-      }
-    } catch (err) {
-      setError("네트워크 오류가 발생했습니다.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  }, [selectedCategory, selectedCruiseName, currentUser, fetchCruises]);
 
   const deleteCruise = async (id: string) => {
     if (!confirm("정말 삭제하시겠습니까?")) return;
@@ -78,7 +78,7 @@ export default function CruiseListPage() {
       } else {
         alert("삭제에 실패했습니다.");
       }
-    } catch (err) {
+    } catch (_err) {
       alert("삭제 중 오류가 발생했습니다.");
     }
   };

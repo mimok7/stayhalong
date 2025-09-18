@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllCruiseInfos, getUniqueCategories, CruiseInfo } from "../../data/cruises";
+import { getAllCruiseInfos, getUniqueCategories } from "../../data/cruises";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
