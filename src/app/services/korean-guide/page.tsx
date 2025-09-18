@@ -331,8 +331,8 @@ export default function KoreanGuidePage() {
                             <tr className="bg-indigo-100">
                               <th className="px-3 py-2 text-left font-semibold">투어인원</th>
                               <th className="px-3 py-2 text-left font-semibold">1인당 금액</th>
-                              <th className="px-3 py-2 text-left font-semibold">총 인원 합계금액</th>
                               <th className="px-3 py-2 text-left font-semibold">투어 이용차량</th>
+                              <th className="px-3 py-2 text-left font-semibold">총 금액</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -340,8 +340,9 @@ export default function KoreanGuidePage() {
                               <tr key={index} className="border-b border-gray-200">
                                 <td className="px-3 py-2">{price.people}</td>
                                 <td className="px-3 py-2 font-medium">{price.perPerson}</td>
-                                <td className="px-3 py-2 font-medium">{price.total}</td>
                                 <td className="px-3 py-2">{price.vehicle}</td>
+                                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                                <td className="px-3 py-2">{(price as any).total || (price as any).deposit || 'N/A'}</td>
                               </tr>
                             ))}
                           </tbody>
@@ -465,8 +466,10 @@ export default function KoreanGuidePage() {
                                 <td className="px-3 py-2">{price.people}</td>
                                 <td className="px-3 py-2 font-medium">{price.perPerson}</td>
                                 <td className="px-3 py-2">{price.vehicle}</td>
-                                <td className="px-3 py-2">{price.deposit}</td>
-                                <td className="px-3 py-2">{price.payment}</td>
+                                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                                <td className="px-3 py-2">{(price as any).deposit || (price as any).total || 'N/A'}</td>
+                                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                                <td className="px-3 py-2">{(price as any).payment || 'N/A'}</td>
                               </tr>
                             ))}
                           </tbody>
@@ -480,7 +483,7 @@ export default function KoreanGuidePage() {
                       <div className="mb-4">
                         <p className="text-sm text-blue-700 mb-3 font-medium">불포함 내역은 반드시 사전에 잘 확인 해 주세요.</p>
                         <ul className="space-y-2">
-                          {tour.vehicleInfo.map((info, index) => (
+                          {tour.vehicleInfo?.map((info, index) => (
                             <li key={index} className="flex items-start gap-2 text-sm text-blue-700">
                               <span className="text-blue-500 mt-1">•</span>
                               <span>{info}</span>
@@ -493,7 +496,7 @@ export default function KoreanGuidePage() {
                       <div className="bg-blue-100 rounded-lg p-3">
                         <h5 className="font-semibold text-blue-800 mb-2">차량 업그레이드 (스테이하롱 리무진으로 변경 시)</h5>
                         <div className="grid grid-cols-1 gap-2 text-sm">
-                          {tour.vehicleUpgrade.map((upgrade, index) => (
+                          {tour.vehicleUpgrade?.map((upgrade, index) => (
                             <div key={index} className="flex justify-between items-center">
                               <span>{upgrade.from} {upgrade.to}</span>
                               <span className="font-medium text-blue-600">{upgrade.cost}</span>
@@ -646,7 +649,8 @@ export default function KoreanGuidePage() {
                                 <td className="px-3 py-2">{price.people}</td>
                                 <td className="px-3 py-2 font-medium">{price.perPerson}</td>
                                 <td className="px-3 py-2">{price.vehicle}</td>
-                                <td className="px-3 py-2">{price.deposit}</td>
+                                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                                <td className="px-3 py-2">{(price as any).deposit || (price as any).total || 'N/A'}</td>
                               </tr>
                             ))}
                           </tbody>
@@ -797,8 +801,10 @@ export default function KoreanGuidePage() {
                                 <td className="px-3 py-2">{price.people}</td>
                                 <td className="px-3 py-2 font-medium">{price.perPerson}</td>
                                 <td className="px-3 py-2">{price.vehicle}</td>
-                                <td className="px-3 py-2">{price.deposit}</td>
-                                <td className="px-3 py-2">{price.payment}</td>
+                                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                                <td className="px-3 py-2">{(price as any).deposit || (price as any).total || 'N/A'}</td>
+                                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                                <td className="px-3 py-2">{(price as any).payment || 'N/A'}</td>
                               </tr>
                             ))}
                           </tbody>
