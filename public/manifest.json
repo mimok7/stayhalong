@@ -1,0 +1,28 @@
+{
+  "name": "Stay Halong - 하롱베이 크루즈 여행",
+  "short_name": "Stay Halong",
+  "description": "하롱베이 현지 전문 한국 여행사 스테이하롱. 세계자연유산 하롱베이에서 즐기는 프리미엄 크루즈 여행과 현지 서비스를 제공합니다.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ko",
+  "dir": "ltr",
+  "categories": ["travel", "business"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
