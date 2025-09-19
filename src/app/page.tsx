@@ -68,7 +68,7 @@ export default function HomePage() {
               <span>🇻🇳</span>
               하롱베이 현지 전문 유일 한국인 여행사
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               <span className="block">스테이하롱</span>
               <span className="block text-cyan-200">Stay Halong</span>
             </h1>
@@ -92,7 +92,7 @@ export default function HomePage() {
                 href="http://pf.kakao.com/_zvsxaG/chat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-yellow-500 text-yellow-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition-all transform hover:scale-105 shadow-lg inline-block text-center"
+                className="bg-yellow-500 text-yellow-900 px-4 py-2 rounded-lg font-bold text-sm hover:bg-yellow-400 transition-all transform hover:scale-105 shadow inline-block text-center"
               >
                 💬 카카오톡 상담하기
               </a>
@@ -100,7 +100,7 @@ export default function HomePage() {
                 href="https://cafe.naver.com/stayhalong"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all inline-block text-center"
+                className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-white/30 transition-all inline-block text-center"
               >
                 🏢 네이버 카페 방문
               </a>
@@ -112,8 +112,8 @@ export default function HomePage() {
       {/* Main Services */}
       <section className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">스테이하롱 주요 서비스</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">스테이하롱 주요 서비스</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             현지 전문가가 제공하는 베트남 여행의 모든 것을 경험해보세요
           </p>
         </div>
@@ -164,7 +164,7 @@ export default function HomePage() {
                 <span>🏢</span>
                 공식 등록 여행사
               </div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 왜 스테이하롱을 선택해야 할까요?
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -232,7 +232,7 @@ export default function HomePage() {
       {/* Customer Reviews */}
       <section className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">고객 후기</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">고객 후기</h2>
           <p className="text-xl text-gray-600">
             스테이하롱과 함께한 특별한 여행 경험을 확인해보세요
           </p>
@@ -297,7 +297,7 @@ export default function HomePage() {
       <section className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">지금 바로 상담받으세요</h2>
+            <h2 className="text-3xl font-bold mb-6">지금 바로 상담받으세요</h2>
             <p className="text-xl text-gray-300">
               현지 전문가와 1:1 맞춤 상담으로 완벽한 베트남 여행을 계획해보세요
             </p>
@@ -322,7 +322,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="font-medium">카카오톡 상담</div>
-                    <div className="text-gray-300">24시간 실시간 상담</div>
+                    <div className="text-gray-300">24시 까지 실시간 상담</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -377,10 +377,10 @@ export default function HomePage() {
                 <div className="space-y-2 text-sm text-gray-300">
                   <div className="flex justify-between">
                     <span>카카오톡 상담</span>
-                    <span>24시간</span>
+                    <span>24시 까지</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>전화 상담</span>
+                   
                     <span>09:00 - 21:00 (한국시간)</span>
                   </div>
                   <div className="flex justify-between">
@@ -422,7 +422,7 @@ export default function HomePage() {
             <div>
               <h5 className="font-bold text-white mb-4">고객 지원</h5>
               <ul className="space-y-2 text-sm">
-                <li>24시간 카카오톡 상담</li>
+                <li>24시 까지 카카오톡 상담</li>
                 <li>여행 중 긴급 지원</li>
                 <li>취소/변경 정책</li>
                 <li>자주 묻는 질문</li>
