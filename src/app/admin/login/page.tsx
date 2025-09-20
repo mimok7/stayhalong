@@ -51,7 +51,7 @@ export default function AdminLoginPage() {
         console.error('Login error:', error);
       } else if (data.user) {
         // profiles 테이블에서 사용자 권한 확인
-        const userRole = await checkUserRole(data.user.id);
+        const userRole = await checkUserRole({ id: data.user.id, email: data.user.email });
 
         if (userRole === 'admin' || userRole === 'manager') {
           // 관리자 권한이 있는 경우에만 로그인 성공

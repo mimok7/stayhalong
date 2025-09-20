@@ -33,7 +33,8 @@ export async function checkUserRole(params: { id?: string; email?: string }): Pr
         .maybeSingle()
 
       if (!error && data) {
-        return (data.role as any) ?? 'user'
+        const role = data.role as 'admin' | 'manager' | 'member' | 'user'
+        return role ?? 'user'
       }
     }
 
@@ -46,7 +47,8 @@ export async function checkUserRole(params: { id?: string; email?: string }): Pr
         .maybeSingle()
 
       if (!error && data) {
-        return (data.role as any) ?? 'user'
+        const role = data.role as 'admin' | 'manager' | 'member' | 'user'
+        return role ?? 'user'
       }
     }
 
