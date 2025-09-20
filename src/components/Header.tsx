@@ -47,6 +47,14 @@ export default function Header() {
               서비스
             </Link>
             <Link
+              href="https://form.stayhalong.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium transition-colors text-gray-600 hover:text-blue-600"
+            >
+              자료관리
+            </Link>
+            <Link
               href="https://reservation.stayhalong.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -68,6 +76,14 @@ export default function Header() {
 
           {/* 모바일 네비게이션 메뉴 */}
           <nav className="md:hidden flex items-center gap-2">
+            <Link
+              href="https://form.stayhalong.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-medium transition-colors px-3 py-2 rounded bg-green-500 text-white hover:bg-green-600 shadow-sm"
+            >
+              자료관리
+            </Link>
             <Link
               href="https://reservation.stayhalong.com"
               target="_blank"
