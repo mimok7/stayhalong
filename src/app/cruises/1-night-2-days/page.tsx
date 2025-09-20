@@ -20,7 +20,7 @@ export default function OneNightTwoDaysPage() {
         <section className="bg-white rounded-2xl shadow-lg pt-4 pb-8 px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <a
-              href="https://cafe.naver.com/f-e/cafes/31003053/articles/8767?boardtype=I&menuid=493&referrerAllArticles=false"
+              href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/8767?fromList=true&menuId=493&tc=cafe_article_list"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -34,7 +34,7 @@ export default function OneNightTwoDaysPage() {
               </div>
             </a>
             <a
-              href="https://cafe.naver.com/f-e/cafes/31003053/articles/7441?boardtype=I&menuid=493&referrerAllArticles=false"
+              href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7441?fromList=true&menuId=493&tc=cafe_article_list"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -48,7 +48,7 @@ export default function OneNightTwoDaysPage() {
               </div>
             </a>
             <a
-              href="https://cafe.naver.com/f-e/cafes/31003053/articles/5930?boardtype=I&menuid=493&referrerAllArticles=false"
+              href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/5930?fromList=true&menuId=493&tc=cafe_article_list"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -62,7 +62,7 @@ export default function OneNightTwoDaysPage() {
               </div>
             </a>
             <a
-              href="https://cafe.naver.com/f-e/cafes/31003053/articles/5062?boardtype=I&menuid=493&referrerAllArticles=false"
+              href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/5062?fromList=true&menuId=493&tc=cafe_article_list"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -76,7 +76,7 @@ export default function OneNightTwoDaysPage() {
               </div>
             </a>
             <a
-              href="https://cafe.naver.com/f-e/cafes/31003053/articles/4918?boardtype=I&menuid=493&referrerAllArticles=false"
+              href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/4918?fromList=true&menuId=493&tc=cafe_article_list"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -90,7 +90,7 @@ export default function OneNightTwoDaysPage() {
               </div>
             </a>
             <a
-              href="https://cafe.naver.com/f-e/cafes/31003053/articles/7256?boardtype=I&menuid=493&referrerAllArticles=false"
+              href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7256?fromList=true&menuId=493&tc=cafe_article_list"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -104,7 +104,7 @@ export default function OneNightTwoDaysPage() {
               </div>
             </a>
             <a
-              href="https://cafe.naver.com/f-e/cafes/31003053/articles/7456?boardtype=I&menuid=493&referrerAllArticles=false"
+              href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7456?fromList=true&menuId=493&tc=cafe_article_list"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -118,7 +118,7 @@ export default function OneNightTwoDaysPage() {
               </div>
             </a>
             <a
-              href="https://cafe.naver.com/f-e/cafes/31003053/articles/2593?boardtype=I&menuid=493&referrerAllArticles=false"
+              href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/2593?fromList=true&menuId=493&tc=cafe_article_list"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -132,7 +132,7 @@ export default function OneNightTwoDaysPage() {
               </div>
             </a>
             <a
-              href="https://cafe.naver.com/f-e/cafes/31003053/articles/2057?boardtype=I&menuid=493&referrerAllArticles=false"
+              href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/2057?fromList=true&menuId=493&tc=cafe_article_list"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -146,7 +146,7 @@ export default function OneNightTwoDaysPage() {
               </div>
             </a>
             <a
-              href="https://cafe.naver.com/f-e/cafes/31003053/articles/6485?boardtype=I&menuid=493&referrerAllArticles=false"
+              href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/6485?fromList=true&menuId=493&tc=cafe_article_list"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
