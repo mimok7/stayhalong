@@ -2,14 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { login, isAuthenticated } from '@/lib/auth';
+import { createClient, checkUserRole } from '@/lib/supabase';
 
 export default function AdminLoginPage() {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const supabase = createClient();
 
   // 페이지 타이틀 설정
   useEffect(() => {
@@ -18,10 +19,21 @@ export default function AdminLoginPage() {
 
   // 이미 로그인되어 있다면 관리자 페이지로 리다이렉트
   useEffect(() => {
-    if (isAuthenticated()) {
-      router.push('/admin');
-    }
-  }, [router]);
+    const checkUser = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        // 사용자 역할 확인
+        const userRole = user.user_metadata?.role || user.app_metadata?.role;
+        if (userRole === 'admin' || userRole === 'manager') {
+          router.push('/admin');
+        } else {
+          // 권한이 없으면 로그아웃
+          await supabase.auth.signOut();
+        }
+      }
+    };
+    checkUser();
+  }, [router, supabase]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,13 +41,26 @@ export default function AdminLoginPage() {
     setLoading(true);
 
     try {
-      const user = login(username, password);
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
 
-      if (user) {
-        // 로그인 성공
-        router.push('/admin');
-      } else {
-        setError('잘못된 사용자명 또는 비밀번호입니다.');
+      if (error) {
+        setError('잘못된 이메일 또는 비밀번호입니다.');
+        console.error('Login error:', error);
+      } else if (data.user) {
+        // profiles 테이블에서 사용자 권한 확인
+        const userRole = await checkUserRole(data.user.id);
+
+        if (userRole === 'admin' || userRole === 'manager') {
+          // 관리자 권한이 있는 경우에만 로그인 성공
+          router.push('/admin');
+        } else {
+          // 권한이 없는 경우 로그아웃 처리
+          await supabase.auth.signOut();
+          setError('관리자 권한이 없습니다. 접근이 거부되었습니다.');
+        }
       }
     } catch (err) {
       setError('로그인 중 오류가 발생했습니다.');
@@ -65,18 +90,18 @@ export default function AdminLoginPage() {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm -space-y-px">
             <div>
-              <label htmlFor="username" className="sr-only">
-                사용자명
+              <label htmlFor="email" className="sr-only">
+                이메일
               </label>
               <input
-                id="username"
-                name="username"
-                type="text"
+                id="email"
+                name="email"
+                type="email"
                 required
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                placeholder="사용자명"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                placeholder="이메일 주소"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
@@ -126,14 +151,6 @@ export default function AdminLoginPage() {
                 '로그인'
               )}
             </button>
-          </div>
-
-          <div className="text-center">
-            <div className="text-sm text-gray-600">
-              <div className="font-medium">테스트 계정:</div>
-              <div>관리자: admin / admin123</div>
-              <div>매니저: manager / manager123</div>
-            </div>
           </div>
         </form>
       </div>
