@@ -432,7 +432,7 @@ export default function HomePage() {
               <h5 className="font-bold text-white mb-4">회사 정보</h5>
               <ul className="space-y-2 text-sm">
                 <li>📞 070-4554-5185</li>
-                <li>📧 stayhalong@gmail.com</li>
+                <li>📧 support@stayhalong.com</li>
                 <li>📍 하롱시, 베트남</li>
                 <li>🏢 사업자번호: 2500707601</li>
               </ul>

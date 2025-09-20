@@ -24,7 +24,7 @@ export default function Header() {
             <span className="text-lg font-bold">Stay Halong</span>
           </Link>
 
-          {/* 네비게이션 메뉴 */}
+          {/* 데스크톱 네비게이션 메뉴 */}
           <nav className="hidden md:flex items-center gap-6">
             <Link
               href="/cruises"
@@ -66,20 +66,17 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* 모바일 메뉴 버튼 */}
-          <div className="md:hidden">
+          {/* 모바일 네비게이션 메뉴 */}
+          <nav className="md:hidden flex items-center gap-2">
             <Link
-              href="/"
-              className={`inline-flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                isHome
-                  ? "bg-blue-100 text-blue-700"
-                  : "bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700"
-              }`}
+              href="https://reservation.stayhalong.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-medium transition-colors px-3 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 shadow-sm"
             >
-              <span>🏠</span>
-              <span>홈</span>
+              예약관리
             </Link>
-          </div>
+          </nav>
 
           {/* 데스크톱 홈 버튼 */}
           {!isHome && (

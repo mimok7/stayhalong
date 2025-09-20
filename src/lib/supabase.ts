@@ -9,23 +9,48 @@ export function createClient() {
   return createBrowserClient(supabaseUrl, supabaseAnonKey)
 }
 
-// 사용자 권한 확인 함수
-export async function checkUserRole(userId: string): Promise<'admin' | 'manager' | 'user' | null> {
+// 사용자 권한 확인 함수 (id 우선, 없으면 email로 조회)
+export async function checkUserRole(params: { id?: string; email?: string }): Promise<'admin' | 'manager' | 'member' | 'user' | null> {
   const supabase = createClient()
 
+  const { id, email } = params
   try {
-    const { data, error } = await supabase
-      .from('users')
-      .select('role')
-      .eq('id', userId)
-      .single()
-
-    if (error) {
-      console.error('Error checking user role:', error)
-      return null
+    // 임시 허용: 특정 이메일은 manager 권한 부여 (DB 값과 무관하게 오버라이드)
+    const ALLOW_MANAGER_EMAILS = new Set([
+      'kjh@hyojachoe.goe.go.kr',
+      'kjh@hyojacho.es.kr',
+    ])
+    if (email && ALLOW_MANAGER_EMAILS.has(email.toLowerCase())) {
+      return 'manager'
     }
 
-    return data?.role || 'user'
+    // 1) id 기준 조회 시도
+    if (id) {
+      const { data, error } = await supabase
+        .from('users')
+        .select('role, email')
+        .eq('id', id)
+        .maybeSingle()
+
+      if (!error && data) {
+        return (data.role as any) ?? 'user'
+      }
+    }
+
+    // 2) email 기준 조회로 폴백
+    if (email) {
+      const { data, error } = await supabase
+        .from('users')
+        .select('role, email')
+        .eq('email', email)
+        .maybeSingle()
+
+      if (!error && data) {
+        return (data.role as any) ?? 'user'
+      }
+    }
+
+    return null
   } catch (error) {
     console.error('Error checking user role:', error)
     return null

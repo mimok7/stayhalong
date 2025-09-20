@@ -20,23 +20,25 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         const { data: { user }, error } = await supabase.auth.getUser();
 
         if (error || !user) {
-          router.push('/admin/login');
+          setAuthorized(false);
+          setLoading(false);
+          router.push('/login');
           return;
         }
 
-        // profiles 테이블에서 사용자 권한 확인
-        const userRole = await checkUserRole(user.id);
+  // users 테이블에서 사용자 권한 확인 (id 우선, email 폴백)
+  const userRole = await checkUserRole({ id: user.id, email: user.email ?? undefined });
 
-        if (userRole === 'admin' || userRole === 'manager') {
-          setAuthorized(true);
-        } else {
-          // 권한이 없으면 로그인 페이지로 리다이렉트
+        const ok = userRole === 'admin' || userRole === 'manager'
+        setAuthorized(!!ok);
+        if (!ok) {
           await supabase.auth.signOut();
-          router.push('/admin/login?error=unauthorized');
+          router.push('/login?error=unauthorized');
         }
       } catch (error) {
         console.error('Auth check error:', error);
-        router.push('/admin/login');
+        setAuthorized(false);
+        router.push('/login');
       } finally {
         setLoading(false);
       }
