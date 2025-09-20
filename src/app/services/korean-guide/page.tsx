@@ -456,8 +456,6 @@ export default function KoreanGuidePage() {
                               <th className="px-3 py-2 text-left font-semibold">투어인원</th>
                               <th className="px-3 py-2 text-left font-semibold">1인당 가격</th>
                               <th className="px-3 py-2 text-left font-semibold">투어 시 이용차량</th>
-                              <th className="px-3 py-2 text-left font-semibold">예약금</th>
-                              <th className="px-3 py-2 text-left font-semibold">잔금</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -466,10 +464,6 @@ export default function KoreanGuidePage() {
                                 <td className="px-3 py-2">{price.people}</td>
                                 <td className="px-3 py-2 font-medium">{price.perPerson}</td>
                                 <td className="px-3 py-2">{price.vehicle}</td>
-                                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                                <td className="px-3 py-2">{(price as any).deposit || (price as any).total || 'N/A'}</td>
-                                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                                <td className="px-3 py-2">{(price as any).payment || 'N/A'}</td>
                               </tr>
                             ))}
                           </tbody>
