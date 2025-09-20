@@ -65,6 +65,19 @@ export default function CruisesPage() {
     }
   }
 
+  function getCategoryHref(category: string): string {
+    switch (category) {
+      case "1박2일":
+        return "/cruises/1-night-2-days";
+      case "2박3일":
+        return "/cruises/2-nights-3-days";
+      case "당일":
+        return "/cruises/day-cruises";
+      default:
+        return "/cruises";
+    }
+  }
+
   function getCategoryFeatures(category: string): string[] {
     switch (category) {
       case "1박2일":
@@ -90,7 +103,7 @@ export default function CruisesPage() {
       description: getCategoryDescription(category),
       icon: getCategoryIcon(category),
       color: getCategoryColor(category),
-      href: `/cruises/${category.toLowerCase().replace(/\s+/g, '-')}`,
+      href: getCategoryHref(category),
       duration: category,
       price: getCategoryPrice(category),
       features: getCategoryFeatures(category),
