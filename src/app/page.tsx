@@ -54,6 +54,16 @@ export default function HomePage() {
       color: "from-orange-600 to-red-600",
       href: "/services/hotels",
       features: ["최적가 보장", "실시간 예약", "한국어 지원"]
+    },
+    {
+      id: "data-management",
+      title: "자료관리",
+      subtitle: "지난 자료",
+      description: "지난 자료 열람",
+      icon: "📋",
+      color: "from-indigo-500 to-purple-600",
+      href: "https://form.stayhalong.com",
+      features: ["자료 업로드", "공유 관리", "실시간 동기화"]
     }
   ];
 
@@ -118,7 +128,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {mainServices.map((service) => (
             <Link
               key={service.id}
