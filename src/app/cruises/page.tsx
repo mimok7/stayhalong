@@ -124,7 +124,8 @@ export default function CruisesPage() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">하롱베이 크루즈</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              세계자연유산 하롱베이에서 즐기는 다양한 크루즈 옵션을 만나보세요. 
+              세계자연유산 하롱베이에서 즐기는 다양한 크루즈 옵션을 만나보세요.
+              <br />
               스테이하롱이 엄선한 최고의 크루즈 상품들을 제공합니다.
             </p>
           </div>
@@ -145,35 +146,42 @@ export default function CruisesPage() {
         {/* Service Introduction */}
         <section className="bg-white rounded-2xl shadow-lg p-8 mb-12">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">스테이하롱 크루즈 중개 서비스</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">스테이하롱 크루즈 서비스</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               하롱베이 현지 전문가들이 엄선한 다양한 크루즈 옵션을 한 번에 비교하고 예약하세요. 
-              Paradise Elegance, Calista, Ambassador 등 최고급 크루즈부터 가성비 좋은 크루즈까지 
-              모든 옵션을 제공합니다.
+            최고급 크루즈부터 가성비 좋은 크루즈까지 모든 옵션을 제공합니다.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎯</span>
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                <span className="text-xl">🎯</span>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">맞춤형 추천</h3>
-              <p className="text-gray-600 text-sm">고객의 예산과 선호도에 맞는 최적의 크루즈 추천</p>
+              <div className="text-left">
+                <h3 className="font-bold text-gray-900 mb-1">맞춤형 추천</h3>
+                <p className="text-gray-600 text-sm">고객의 예산과 선호도에 맞는 최적의 크루즈 추천</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💰</span>
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                <span className="text-xl">💰</span>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">최적가 보장</h3>
-              <p className="text-gray-600 text-sm">현지 직접 운영으로 최저가 크루즈 상품 제공</p>
+              <div className="text-left">
+                <h3 className="font-bold text-gray-900 mb-1">최적가 보장</h3>
+                <p className="text-gray-600 text-sm">현지 직접 운영으로 최저가 크루즈 상품 제공</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🛡️</span>
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mt-1">
+                <span className="text-xl">🛡️</span>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">안전 보장</h3>
-              <p className="text-gray-600 text-sm">정식 등록 여행사의 신뢰할 수 있는 예약 시스템</p>
+              <div className="text-left">
+                <h3 className="font-bold text-gray-900 mb-1">안전 보장</h3>
+                <p className="text-gray-600 text-sm">정식 등록 여행사의 신뢰할 수 있는 예약 시스템</p>
+              </div>
             </div>
           </div>
         </section>
@@ -236,33 +244,44 @@ export default function CruisesPage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-4xl">🎯</span>
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mt-1">
+                <span className="text-3xl">🎯</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">다양한 옵션</h3>
-              <p className="text-blue-100 text-sm">럭셔리부터 가성비까지 모든 크루즈 옵션 제공</p>
+              <div className="text-left">
+                <h3 className="text-xl font-bold mb-1">다양한 옵션</h3>
+                <p className="text-blue-100 text-sm">럭셔리부터 가성비까지 모든 크루즈 옵션 제공</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-4xl">💬</span>
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mt-1">
+                <span className="text-3xl">💬</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">한국어 지원</h3>
-              <p className="text-blue-100 text-sm">예약부터 여행까지 완벽한 한국어 서비스</p>
+              <div className="text-left">
+                <h3 className="text-xl font-bold mb-1">한국어 지원</h3>
+                <p className="text-blue-100 text-sm">예약부터 여행까지 완벽한 한국어 서비스</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-4xl">📞</span>
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mt-1">
+                <span className="text-3xl">📞</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">24시간 지원</h3>
-              <p className="text-blue-100 text-sm">여행 중 언제든 연락 가능한 현지 지원팀</p>
+              <div className="text-left">
+                <h3 className="text-xl font-bold mb-1">24시간 지원</h3>
+                <p className="text-blue-100 text-sm">여행 중 언제든 연락 가능한 현지 지원팀</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-4xl">🛡️</span>
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mt-1">
+                <span className="text-3xl">🛡️</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">안전 보장</h3>
-              <p className="text-blue-100 text-sm">정식 등록 여행사의 신뢰할 수 있는 서비스</p>
+              <div className="text-left">
+                <h3 className="text-xl font-bold mb-1">안전 보장</h3>
+                <p className="text-blue-100 text-sm">정식 등록 여행사의 신뢰할 수 있는 서비스</p>
+              </div>
             </div>
           </div>
         </section>

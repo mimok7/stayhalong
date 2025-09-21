@@ -166,47 +166,64 @@ export default function OneNightTwoDaysPage() {
         <section className="mt-16 bg-white rounded-2xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">1박 2일 크루즈 상품 포함 사항</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mt-1">
                 <span className="text-2xl">🏨</span>
               </div>
-              <h3 className="font-bold mb-2">숙박</h3>
-              <p className="text-gray-600 text-sm">크루즈 내 프리미엄 객실 1박</p>
+              <div className="text-left">
+                <h3 className="font-bold mb-1">숙박</h3>
+                <p className="text-gray-600 text-sm">크루즈 내 프리미엄 객실 1박</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mt-1">
                 <span className="text-2xl">🍽️</span>
               </div>
-              <h3 className="font-bold mb-2">식사</h3>
-              <p className="text-gray-600 text-sm">조식, 중식, 석식 포함 (음료 별도)</p>
+              <div className="text-left">
+                <h3 className="font-bold mb-1">식사</h3>
+                <p className="text-gray-600 text-sm">조식, 중식, 석식 포함 (음료 별도)</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                 <span className="text-2xl">🚤</span>
               </div>
-              <h3 className="font-bold mb-2">크루즈 투어</h3>
-              <p className="text-gray-600 text-sm">하롱베이 크루즈 관광</p>
+              <div className="text-left">
+                <h3 className="font-bold mb-1">크루즈 투어</h3>
+                <p className="text-gray-600 text-sm">하롱베이 크루즈 관광</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mt-1">
                 <span className="text-2xl">🛶</span>
               </div>
-              <h3 className="font-bold mb-2">액티비티</h3>
-              <p className="text-gray-600 text-sm">카약, 동굴 탐험 등</p>
+              <div className="text-left">
+                <h3 className="font-bold mb-1">액티비티</h3>
+                <p className="text-gray-600 text-sm">카약, 동굴 탐험 등</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mt-1">
                 <span className="text-2xl">🚌</span>
               </div>
-              <h3 className="font-bold mb-2">픽업/샌딩</h3>
-              <p className="text-gray-600 text-sm">하노이 공항 ↔ 크루즈 선착장(유료 및 무료)</p>
+              <div className="text-left">
+                <h3 className="font-bold mb-1">픽업/샌딩</h3>
+                <p className="text-gray-600 text-sm">하노이 공항 ↔ 크루즈 선착장(유료 및 무료)</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mt-1">
                 <span className="text-2xl">👨‍🏫</span>
               </div>
-              <h3 className="font-bold mb-2">가이드</h3>
-              <p className="text-gray-600 text-sm">한국어 전문 가이드(선택 사항)</p>
+              <div className="text-left">
+                <h3 className="font-bold mb-1">가이드</h3>
+                <p className="text-gray-600 text-sm">한국어 전문 가이드(선택 사항)</p>
+              </div>
             </div>
           </div>
         </section>
