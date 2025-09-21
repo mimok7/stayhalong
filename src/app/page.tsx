@@ -18,7 +18,7 @@ export default function HomePage() {
     {
       id: "cruise",
       title: "하롱베이 크루즈",
-      subtitle: `${categories.length}가지 옵션 · ${cruiseInfos.length}개 객실`,
+      subtitle: `다수의 옵션 · 다수의 객실`,
       description: "세계자연유산 하롱베이에서 즐기는 프리미엄 크루즈 여행",
       icon: "🚢",
       color: "from-blue-500 to-cyan-500",
@@ -48,8 +48,8 @@ export default function HomePage() {
     {
       id: "hotel",
       title: "베트남 호텔 예약",
-      subtitle: "하노이 · 하롱베이 · 호치민",
-      description: "베트남 전 지역 호텔 예약 및 추천 서비스",
+      subtitle: "하노이 · 하롱베이",
+      description: "베트남 호텔 예약 및 추천 서비스",
       icon: "🏨",
       color: "from-orange-600 to-red-600",
       href: "/services/hotels",
@@ -114,7 +114,7 @@ export default function HomePage() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">스테이하롱 주요 서비스</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            현지 전문가가 제공하는 베트남 여행의 모든 것을 경험해보세요
+            현지 전문가가 추천하는 여행을 경험해 보세요
           </p>
         </div>
 
@@ -201,30 +201,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">실시간 예약 현황</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
-                    <span className="font-medium">오늘 크루즈 예약</span>
-                    <span className="text-blue-600 font-bold">12건</span>
-                  </div>
-                  <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg">
-                    <span className="font-medium">이번 주 상담 건수</span>
-                    <span className="text-green-600 font-bold">89건</span>
-                  </div>
-                  <div className="flex justify-between items-center p-4 bg-purple-50 rounded-lg">
-                    <span className="font-medium">누적 고객 만족도</span>
-                    <span className="text-purple-600 font-bold">98.5%</span>
-                  </div>
-                </div>
-                <div className="mt-6 text-center">
-                  <span className="text-sm text-gray-500">
-                    * 실시간 업데이트 중
-                  </span>
-                </div>
-              </div>
-            </div>
+            {/* 실시간 예약 현황 카드 삭제됨 */}
           </div>
         </div>
       </section>
@@ -439,7 +416,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 mt-8 text-center text-sm">
-            <p>&copy; 2025 스테이하롱 (Stay Halong) - CONG TY TENPER COMMUNICATIONS. 모든 권리 보유.</p>
+            <p>&copy; 2025 스테이하롱 (Stay Halong) - CONG TY TENPER COMMUNICATIONS. </p>
             <p className="mt-2">대표: KIM DONG HYUN | 사업자등록번호: 2500707601</p>
           </div>
         </div>

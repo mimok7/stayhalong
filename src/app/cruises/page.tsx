@@ -116,7 +116,7 @@ export default function CruisesPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 py-12">
+  <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               <span>🇻🇳</span>
@@ -133,7 +133,7 @@ export default function CruisesPage() {
       </header>
 
       {/* Breadcrumb */}
-      <section className="max-w-7xl mx-auto px-4 py-6">
+  <section className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center gap-2 text-sm text-gray-600">
           <Link href="/" className="hover:text-blue-600">홈</Link>
           <span>›</span>
@@ -142,11 +142,11 @@ export default function CruisesPage() {
       </section>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 py-12">
+  <main className="max-w-7xl mx-auto px-4 py-8">
         {/* Service Introduction */}
-        <section className="bg-white rounded-2xl shadow-lg p-8 mb-12">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">스테이하롱 크루즈 서비스</h2>
+  <section className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">스테이하롱 크루즈 서비스</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               하롱베이 현지 전문가들이 엄선한 다양한 크루즈 옵션을 한 번에 비교하고 예약하세요. 
             최고급 크루즈부터 가성비 좋은 크루즈까지 모든 옵션을 제공합니다.
@@ -311,7 +311,7 @@ export default function CruisesPage() {
             </a>
           </div>
           <div className="mt-6 text-sm text-gray-500">
-            <p>📞 070-4554-5185 | 📧 stayhalong@gmail.com</p>
+            <p>📞 070-4554-5185 | 📧 support@stayhalong.com</p>
             <p className="mt-2">평균 응답 시간: 5분 이내</p>
           </div>
         </section>
