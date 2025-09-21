@@ -62,7 +62,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 py-20">
+  <div className="relative max-w-7xl mx-auto px-4 py-16">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded-full text-sm font-medium mb-6">
               <span>🇻🇳</span>
@@ -92,17 +92,17 @@ export default function HomePage() {
                 href="http://pf.kakao.com/_zvsxaG/chat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-yellow-500 text-yellow-900 px-4 py-2 rounded-lg font-bold text-sm hover:bg-yellow-400 transition-all transform hover:scale-105 shadow inline-block text-center"
+                className="w-full sm:w-auto max-w-[200px] mx-auto bg-yellow-500 text-yellow-900 py-2 px-4 rounded-xl font-bold text-base sm:text-lg hover:bg-yellow-400 transition-colors text-center shadow-lg"
               >
-                💬 카카오톡 상담하기
+                💬 카카오톡 상담
               </a>
               <a
                 href="https://cafe.naver.com/stayhalong"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-white/30 transition-all inline-block text-center"
+                className="w-full sm:w-auto max-w-[200px] mx-auto bg-blue-600 text-white py-2 px-4 rounded-xl font-bold text-base sm:text-lg hover:bg-blue-700 transition-colors text-center shadow-lg"
               >
-                🏢 네이버 카페 방문
+                🏢 네이버 카페
               </a>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function HomePage() {
       </section>
 
       {/* Main Services */}
-      <section className="max-w-7xl mx-auto px-4 py-20">
+  <section className="max-w-7xl mx-auto px-4 py-12">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">스테이하롱 주요 서비스</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -156,19 +156,19 @@ export default function HomePage() {
       </section>
 
       {/* Company Introduction */}
-      <section className="bg-gradient-to-r from-green-50 to-blue-50 py-20">
+  <section className="bg-gradient-to-r from-green-50 to-blue-50 py-6">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="grid lg:grid-cols-2 gap-6 items-center">
+            <div className="bg-white rounded-2xl shadow p-6">
+              <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-3">
                 <span>🏢</span>
                 공식 등록 여행사
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 왜 스테이하롱을 선택해야 할까요?
               </h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                베트남 현지에 직접 설립된 <strong className="text-green-700">CONG TY TENPER COMMUNICATIONS</strong> 
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                베트남 현지에 직접 설립된 <strong className="text-green-700">CONG TY TENPER COMMUNICATIONS</strong>
                 (사업자등록번호: 2500707601)로, 한국 여행객을 위한 전문적이고 안전한 여행 서비스를 제공합니다.
               </p>
               <div className="space-y-4">
@@ -230,9 +230,9 @@ export default function HomePage() {
       </section>
 
       {/* Customer Reviews */}
-      <section className="max-w-7xl mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">고객 후기</h2>
+      <section className="max-w-7xl mx-auto px-4 py-8">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">고객 후기</h2>
           <p className="text-xl text-gray-600">
             스테이하롱과 함께한 특별한 여행 경험을 확인해보세요
           </p>
@@ -282,7 +282,7 @@ export default function HomePage() {
 
         <div className="text-center mt-12">
           <a
-            href="https://cafe.naver.com/stayhalong"
+            href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/menus/13"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-colors"
@@ -322,7 +322,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="font-medium">카카오톡 상담</div>
-                    <div className="text-gray-300">24시 까지 실시간 상담</div>
+                    <div className="text-gray-300">09:00 - 24:00 (한국시간) 실시간 상담</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -331,7 +331,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div className="font-medium">이메일</div>
-                    <div className="text-gray-300">stayhalong@gmail.com</div>
+                    <div className="text-gray-300">support@stayhalong.com</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -354,7 +354,7 @@ export default function HomePage() {
                     href="http://pf.kakao.com/_zvsxaG/chat"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-yellow-500 text-yellow-900 py-4 px-6 rounded-xl font-bold text-center hover:bg-yellow-400 transition-colors"
+                    className="w-full sm:w-auto max-w-[200px] mx-auto bg-yellow-500 text-yellow-900 py-2 px-4 rounded-xl font-bold text-sm sm:text-base text-center hover:bg-yellow-400 transition-colors"
                   >
                     💬 카카오톡 상담
                   </a>
@@ -362,7 +362,7 @@ export default function HomePage() {
                     href="https://cafe.naver.com/stayhalong"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-blue-600 text-white py-4 px-6 rounded-xl font-bold text-center hover:bg-blue-700 transition-colors"
+                    className="w-full sm:w-auto max-w-[200px] mx-auto bg-blue-600 text-white py-2 px-4 rounded-xl font-bold text-sm sm:text-base text-center hover:bg-blue-700 transition-colors"
                   >
                     🏢 네이버 카페
                   </a>
@@ -377,11 +377,11 @@ export default function HomePage() {
                 <div className="space-y-2 text-sm text-gray-300">
                   <div className="flex justify-between">
                     <span>카카오톡 상담</span>
-                    <span>24시 까지</span>
+                    <span>09:00 - 24:00 (한국시간)</span>
                   </div>
                   <div className="flex justify-between">
                    
-                    <span>09:00 - 21:00 (한국시간)</span>
+                   
                   </div>
                   <div className="flex justify-between">
                     <span>이메일 답변</span>

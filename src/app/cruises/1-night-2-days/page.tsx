@@ -17,7 +17,7 @@ export default function OneNightTwoDaysPage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-6">
         {/* Image Gallery */}
-        <section className="bg-white rounded-2xl shadow-lg pt-4 pb-8 px-8">
+  <section className="bg-white rounded-2xl shadow-lg pt-4 pb-2 px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <a
               href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/8767?fromList=true&menuId=493&tc=cafe_article_list"
@@ -163,7 +163,7 @@ export default function OneNightTwoDaysPage() {
         </section>
 
         {/* Service Info */}
-        <section className="mt-16 bg-white rounded-2xl shadow-lg p-8">
+  <section className="mt-6 bg-white rounded-2xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">1박 2일 크루즈 상품 포함 사항</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="flex items-start gap-4">

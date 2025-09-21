@@ -53,7 +53,7 @@ export default function DayCruisesPage() {
       {/* Header */}
       <header className="bg-gradient-to-r from-green-900 via-green-700 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-2">원데이 크루즈 상품</h1>
+          <h1 className="text-3xl font-bold mb-2">원데이 크루즈 상품</h1>
           <p className="text-xl text-green-100">
             하롱베이의 아름다움을 하루 만에 경험하는 당일 크루즈 투어
           </p>
@@ -61,94 +61,108 @@ export default function DayCruisesPage() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 py-12">
-        {/* Cruise Grid */}
-        <div className="grid lg:grid-cols-3 gap-6">
-          {cruises.map((cruise) => (
-            <div key={cruise.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-green-500 to-teal-500 relative">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="absolute bottom-3 left-3 text-white">
-                  <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-bold">
-                    {cruise.discount}% 할인
-                  </span>
-                </div>
+      <main className="max-w-7xl mx-auto px-4 py-6">
+
+        {/* Image Gallery */}
+        <section className="bg-white rounded-2xl shadow-lg pt-2 pb-2 px-8 mt-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <a
+              href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/9405?fromList=true&menuId=128&tc=cafe_article_list"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/day-cruise/1.png" alt="원데이 이미지 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
-              <div className="p-5">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{cruise.name}</h3>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
-                    {cruise.duration}
-                  </span>
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">
-                    {cruise.style}
-                  </span>
-                </div>
-                <p className="text-gray-600 text-sm mb-3 leading-relaxed">
-                  {cruise.description}
-                </p>
-                <div className="flex justify-between items-center mb-3">
-                  <div>
-                    <span className="text-gray-400 line-through text-sm">${cruise.originalPrice} VND</span>
-                    <span className="text-xl font-bold text-green-600 ml-1">${cruise.currentPrice} VND</span>
-                    <span className="text-gray-600 text-sm">/인</span>
-                  </div>
-                  <div className="text-right">
-                    <div className="flex items-center gap-1 text-xs text-gray-600">
-                      <span>⭐ {cruise.rating}</span>
-                      <span>({cruise.reviews})</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="mb-3">
-                  <div className="flex items-center gap-1 text-xs text-gray-600">
-                    {cruise.features.slice(0, 2).map((feature, index) => (
-                      <span key={index}>• {feature}</span>
-                    ))}
-                  </div>
-                </div>
-                <Link
-                  href={`/cruises/day-cruises/${cruise.id}`}
-                  className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-center block text-sm font-medium"
-                >
-                  자세히 보기 →
-                </Link>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/9006?fromList=true&menuId=128&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/day-cruise/1 (1).png" alt="원데이 이미지 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
-            </div>
-          ))}
-        </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7251?fromList=true&menuId=128&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/day-cruise/1 (2).png" alt="원데이 이미지 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/6113?fromList=true&menuId=128&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/day-cruise/1 (3).png" alt="원데이 이미지 4" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/6091?fromList=true&menuId=128&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/day-cruise/1 (4).png" alt="원데이 이미지 5" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/4143?fromList=true&menuId=128&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/day-cruise/1 (5).png" alt="원데이 이미지 6" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/2597?fromList=true&menuId=128&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/day-cruise/8.png" alt="원데이 이미지 7" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/504?fromList=true&menuId=128&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/day-cruise/1 (6).png" alt="원데이 이미지 8" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+          </div>
+        </section>
 
         {/* Service Info */}
-        <section className="mt-16 bg-white rounded-2xl shadow-lg p-8">
+        <section className="mt-6 bg-white rounded-2xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">원데이 크루즈 상품 포함 사항</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mt-1">
                 <span className="text-2xl">🚤</span>
               </div>
-              <h3 className="font-bold mb-2">크루즈 투어</h3>
-              <p className="text-gray-600 text-sm">하롱베이 크루즈 관광 (4-6시간)</p>
+              <div className="text-left">
+                <h3 className="font-bold mb-1">크루즈 투어</h3>
+                <p className="text-gray-600 text-sm">하롱베이 크루즈 관광 (4-6시간)</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mt-1">
                 <span className="text-2xl">🍽️</span>
               </div>
-              <h3 className="font-bold mb-2">식사</h3>
-              <p className="text-gray-600 text-sm">런치 포함 (음료 별도)</p>
+              <div className="text-left">
+                <h3 className="font-bold mb-1">식사</h3>
+                <p className="text-gray-600 text-sm">런치 포함 (음료 별도)</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mt-1">
                 <span className="text-2xl">🛶</span>
               </div>
-              <h3 className="font-bold mb-2">액티비티</h3>
-              <p className="text-gray-600 text-sm">카약, 동굴 탐험 등</p>
+              <div className="text-left">
+                <h3 className="font-bold mb-1">액티비티</h3>
+                <p className="text-gray-600 text-sm">카약, 동굴 탐험 등</p>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                 <span className="text-2xl">🚌</span>
               </div>
-              <h3 className="font-bold mb-2">픽업/샌딩</h3>
-              <p className="text-gray-600 text-sm">하노이 시내 ↔ 크루즈 선착장</p>
+              <div className="text-left">
+                <h3 className="font-bold mb-1">픽업/샌딩</h3>
+                <p className="text-gray-600 text-sm">하노이 시내 ↔ 크루즈 선착장(유료 및 무료)</p>
+              </div>
             </div>
           </div>
         </section>

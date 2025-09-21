@@ -1,71 +1,14 @@
 "use client";
 
 export default function AirportTransferPage() {
-  // 차량 종류별 요금표
-  const vehicleTypes = [
-    {
-      name: "승합차 (4인승)",
-      routes: [
-        { destination: "하노이 시내", time: "40분", price: "300,000" },
-        { destination: "하이퐁 (깟바, 옌뜨)", time: "2시간", price: "1,500,000" },
-        { destination: "하롱베이", time: "2시간 30분 ~ 3시간", price: "1,700,000" },
-        { destination: "요코온센 리조트", time: "3시간 ~ 3시간 30분", price: "2,000,000" },
-        { destination: "닌빈 / 땀꼭", time: "2시간 10분 ~ 2시간 30분", price: "1,200,000" },
-        { destination: "사파", time: "4시간 40분 ~ 5시간 10분", price: "2,500,000" }
-      ]
-    },
-    {
-      name: "승합차 (7인승)",
-      routes: [
-        { destination: "하노이 시내", time: "40분", price: "400,000" },
-        { destination: "하이퐁 (깟바, 옌뜨)", time: "2시간", price: "1,700,000" },
-        { destination: "하롱베이", time: "2시간 30분 ~ 3시간", price: "1,900,000" },
-        { destination: "요코온센 리조트", time: "3시간 ~ 3시간 30분", price: "2,200,000" },
-        { destination: "닌빈 / 땀꼭", time: "2시간 10분 ~ 2시간 30분", price: "1,400,000" },
-        { destination: "사파", time: "4시간 40분 ~ 5시간 10분", price: "2,700,000" }
-      ]
-    },
-    {
-      name: "승합차 (9인승)",
-      routes: [
-        { destination: "하노이 시내", time: "40분", price: "700,000" },
-        { destination: "하이퐁 (깟바, 옌뜨)", time: "2시간", price: "2,000,000" },
-        { destination: "하롱베이", time: "2시간 30분 ~ 3시간", price: "2,200,000" },
-        { destination: "요코온센 리조트", time: "3시간 ~ 3시간 30분", price: "2,500,000" },
-        { destination: "닌빈 / 땀꼭", time: "2시간 10분 ~ 2시간 30분", price: "1,700,000" },
-        { destination: "사파", time: "4시간 40분 ~ 5시간 10분", price: "3,400,000" }
-      ]
-    },
-    {
-      name: "승합차 (15인승)",
-      routes: [
-        { destination: "하노이 시내", time: "40분", price: "1,000,000" },
-        { destination: "하이퐁 (깟바, 옌뜨)", time: "2시간", price: "2,800,000" },
-        { destination: "하롱베이", time: "2시간 30분 ~ 3시간", price: "3,000,000" },
-        { destination: "요코온센 리조트", time: "3시간 ~ 3시간 30분", price: "3,300,000" },
-        { destination: "닌빈 / 땀꼭", time: "2시간 10분 ~ 2시간 30분", price: "2,700,000" },
-        { destination: "사파", time: "4시간 40분 ~ 5시간 10분", price: "4,400,000" }
-      ]
-    },
-    {
-      name: "승합차 (28인승)",
-      routes: [
-        { destination: "하노이 시내", time: "40분", price: "1,200,000" },
-        { destination: "하이퐁 (깟바, 옌뜨)", time: "2시간", price: "3,300,000" },
-        { destination: "하롱베이", time: "2시간 30분 ~ 3시간", price: "3,500,000" },
-        { destination: "요코온센 리조트", time: "3시간 ~ 3시간 30분", price: "3,800,000" },
-        { destination: "닌빈 / 땀꼭", time: "2시간 10분 ~ 2시간 30분", price: "3,000,000" },
-        { destination: "사파", time: "4시간 40분 ~ 5시간 10분", price: "4,700,000" }
-      ]
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-gradient-to-r from-orange-900 via-orange-700 to-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-2">&quot;픽업 / 샌딩&quot; 서비스</h1>
+          <h1 className="text-3xl font-bold mb-2">공항, 렌트카 서비스</h1>
           
+            <p className="text-sm text-orange-100">다양한 렌트카 서비스 와 안전하고 신속한 공항 픽업/샌딩 서비스를 제공합니다.</p>
         </div>
       </header>
 
@@ -107,48 +50,63 @@ export default function AirportTransferPage() {
         </div>
       </section>
 
-      <main className="max-w-7xl mx-auto px-4 py-12">
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">차량별 요금 안내</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {vehicleTypes.map((vehicle, vehicleIndex) => (
-              <div key={vehicleIndex} className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-4">
-                  <h3 className="text-xl font-bold">{vehicle.name}</h3>
-                  <p className="text-orange-100 text-sm">편도 (픽업 또는 드랍) 1대당 금액(통화는 베트남동)</p>
-                </div>
-                <div className="p-6">
-                  <div className="overflow-x-auto">
-                    <table className="w-full">
-                      <thead>
-                        <tr className="border-b-2 border-gray-200">
-                          <th className="text-left py-3 px-4 font-semibold text-gray-700">차량 이용 코스</th>
-                          <th className="text-center py-3 px-4 font-semibold text-gray-700">편도 평균 소요시간</th>
-                          <th className="text-right py-3 px-4 font-semibold text-gray-700">편도 요금</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {vehicle.routes.map((route, index) => (
-                          <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
-                            <td className="py-3 px-4">
-                              <span className="font-medium">하노이 공항 - {route.destination}</span>
-                            </td>
-                            <td className="py-3 px-4 text-center text-gray-600">
-                              {route.time}
-                            </td>
-                            <td className="py-3 px-4 text-right">
-                              <span className="font-bold text-orange-600">{route.price}</span>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+      {/* Additional Airport Gallery */}
+      <section className="bg-white rounded-2xl shadow-lg pt-4 pb-8 px-8 mt-8">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">공항 렌트카 상세 서비스 연결</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/8609?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/airport/airport_01.gif" alt="공항 이미지 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
-            ))}
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7546?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/airport/3.png" alt="공항 이미지 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7545?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/airport/1.png" alt="공항 이미지 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7544?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/airport/2.png" alt="공항 이미지 4" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7542?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/airport/1 (1).png" alt="공항 이미지 5" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7541?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/airport/2 (1).png" alt="공항 이미지 6" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/6368?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/airport/sha_limousine_01.gif" alt="공항 이미지 7" className="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
+
+            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/5047?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="/airport/26.png" alt="공항 이미지 8" className="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+              </div>
+            </a>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <main className="max-w-7xl mx-auto px-4 py-12">
 
         {/* Reservation Guide */}
         <section className="bg-white rounded-2xl shadow-lg p-8 mb-12">
@@ -195,44 +153,7 @@ export default function AirportTransferPage() {
           </div>
         </section>
 
-        {/* Fast Track Images Gallery */}
-        <section className="bg-gray-50 py-12">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">🏃‍♂️ 패스트트랙 서비스</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <img
-                  src="/fasttrack_02.gif"
-                  alt="패스트트랙 서비스 이미지 2"
-                  className="w-full h-auto min-h-64 object-contain hover:scale-105 transition-transform duration-300"
-                />
-                <div className="p-4">
-                  <p className="text-center text-gray-700 font-medium">패스트트랙 이용 서비스</p>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <img
-                  src="/fasttrack_03.gif"
-                  alt="패스트트랙 서비스 이미지 3"
-                  className="w-full h-auto min-h-64 object-contain hover:scale-105 transition-transform duration-300"
-                />
-                <div className="p-4">
-                  <p className="text-center text-gray-700 font-medium">빠른 출입국 심사</p>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                <img
-                  src="/fasttrack_09.gif"
-                  alt="패스트트랙 서비스 이미지 9"
-                  className="w-full h-auto min-h-64 object-contain hover:scale-105 transition-transform duration-300"
-                />
-                <div className="p-4">
-                  <p className="text-center text-gray-700 font-medium">전담 가이드 서비스</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Fast Track Images Gallery removed per request */}
 
         {/* Contact CTA */}
         <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-2xl p-8 text-center">

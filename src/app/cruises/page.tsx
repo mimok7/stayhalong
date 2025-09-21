@@ -55,11 +55,11 @@ export default function CruisesPage() {
   function getCategoryPrice(category: string): string {
     switch (category) {
       case "1박2일":
-        return "151USD부터";
+        return "1,510,000 VND 부터";
       case "2박3일":
-        return "220USD부터";
+        return "2,200,000 VND 부터";
       case "당일":
-        return "85USD부터";
+        return "850,000 VND 부터";
       default:
         return "문의";
     }
@@ -99,7 +99,7 @@ export default function CruisesPage() {
     return {
       id: category.toLowerCase().replace(/\s+/g, '-'),
       title: `${category} 크루즈`,
-      subtitle: `${uniqueCruises.length}개 크루즈 · ${categoryCruises.length}개 객실`,
+      subtitle: `다양한 크루즈 · 다수의 객실`,
       description: getCategoryDescription(category),
       icon: getCategoryIcon(category),
       color: getCategoryColor(category),
