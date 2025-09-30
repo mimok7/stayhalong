@@ -70,16 +70,6 @@ export default function Header() {
             >
               예약관리
             </Link>
-            <Link
-              href="/admin"
-              className={`text-sm font-medium transition-colors ${
-                pathname.startsWith("/admin")
-                  ? "text-blue-600"
-                  : "text-gray-600 hover:text-blue-600"
-              }`}
-            >
-              관리자
-            </Link>
           </nav>
 
           {/* 모바일 네비게이션 메뉴 */}
