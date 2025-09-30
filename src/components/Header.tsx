@@ -47,7 +47,7 @@ export default function Header() {
               서비스
             </Link>
             <Link
-              href="https://form.stayhalong.com"
+              href="https://form.stayhalong.com/admin"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-medium transition-colors text-gray-600 hover:text-blue-600"

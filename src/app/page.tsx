@@ -104,6 +104,14 @@ export default function HomePage() {
               >
                 🏢 네이버 카페
               </a>
+              <a
+                href="https://form.stayhalong.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto max-w-[200px] mx-auto bg-green-600 text-white py-2 px-4 rounded-xl font-bold text-base sm:text-lg hover:bg-green-700 transition-colors text-center shadow-lg"
+              >
+                📝 예약 신청
+              </a>
             </div>
           </div>
         </div>
@@ -342,6 +350,14 @@ export default function HomePage() {
                     className="w-full sm:w-auto max-w-[200px] mx-auto bg-blue-600 text-white py-2 px-4 rounded-xl font-bold text-sm sm:text-base text-center hover:bg-blue-700 transition-colors"
                   >
                     🏢 네이버 카페
+                  </a>
+                  <a
+                    href="https://form.stayhalong.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto max-w-[200px] mx-auto bg-green-600 text-white py-2 px-4 rounded-xl font-bold text-sm sm:text-base text-center hover:bg-green-700 transition-colors"
+                  >
+                    📝 예약 신청
                   </a>
                 </div>
                 <div className="text-center text-gray-400 text-sm">
