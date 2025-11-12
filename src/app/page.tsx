@@ -105,7 +105,7 @@ export default function HomePage() {
                 🏢 네이버 카페
               </a>
               <a
-                href="https://form.stayhalong.com"
+                href="https://customer.stayhalong.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto max-w-[200px] mx-auto bg-green-600 text-white py-2 px-4 rounded-xl font-bold text-base sm:text-lg hover:bg-green-700 transition-colors text-center shadow-lg"
