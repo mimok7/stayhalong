@@ -37,14 +37,12 @@ export default function Header() {
               크루즈
             </Link>
             <Link
-              href="/services"
-              className={`text-sm font-medium transition-colors ${
-                pathname.startsWith("/services")
-                  ? "text-blue-600"
-                  : "text-gray-600 hover:text-blue-600"
-              }`}
+              href="https://form.stayhalong.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium transition-colors text-gray-600 hover:text-blue-600"
             >
-              서비스
+              앱시트신청
             </Link>
             <Link
               href="https://form.stayhalong.com/admin"
