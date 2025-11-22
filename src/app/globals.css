@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@config "../../tailwind.config.js";
 
 @layer base {
   :root {
@@ -68,10 +69,12 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
   html {
     scroll-behavior: smooth;
   }
