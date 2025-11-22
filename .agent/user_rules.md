@@ -1,6 +1,9 @@
-# 사용자 규칙
+# User Rules
 
-## 언어 설정
-- 모든 설명과 응답은 **한국어**로 작성합니다.
-- 코드 주석도 가능한 한 한국어로 작성합니다.
-- 기술 용어는 필요시 영어를 병기할 수 있습니다.
+1. **Language Requirement**:
+   - 모든 설명, 대화, 그리고 **Markdown (.md) 파일(task.md, implementation_plan.md, walkthrough.md 등 포함)**의 내용은 반드시 **한국어**로 작성해야 합니다.
+   - 기술 용어(예: `Next.js`, `Tailwind CSS`, `Component`)는 영문으로 표기해도 무방하지만, 설명 문맥은 한국어를 유지하십시오.
+
+2. **Design Aesthetics**:
+   - "Sophisticated and Simple" 디자인을 추구하십시오.
+   - 복잡한 그라디언트보다는 깔끔한 배경, 여백, 타이포그래피를 강조하십시오.

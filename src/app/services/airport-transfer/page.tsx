@@ -73,8 +73,8 @@ export default function AirportTransferPage() {
               { img: "/airport/3.png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7546?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 2" },
               { img: "/airport/1.png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7545?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 3" },
               { img: "/airport/2.png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7544?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 4" },
-              { img: "/airport/1 (1).png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7542?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 5" },
-              { img: "/airport/2 (1).png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7541?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 6" },
+              { img: "/airport/1%20(1).png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7542?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 5" },
+              { img: "/airport/2%20(1).png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7541?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 6" },
               { img: "/airport/sha_limousine_01.gif", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/6368?fromList=true&menuId=611&tc=cafe_article_list", title: "리무진 서비스" },
               { img: "/airport/26.png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/5047?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 8" },
             ].map((item, idx) => (

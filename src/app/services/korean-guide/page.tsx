@@ -61,10 +61,10 @@ export default function KoreanGuidePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { img: "/korean-guide/1 (2).png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7697?fromList=true&menuId=617&tc=cafe_article_list", title: "투어 현장 1" },
+              { img: "/korean-guide/1%20(2).png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7697?fromList=true&menuId=617&tc=cafe_article_list", title: "투어 현장 1" },
               { img: "/korean-guide/temple.jpg", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/5104?fromList=true&menuId=617&tc=cafe_article_list", title: "투어 현장 2" },
               { img: "/korean-guide/hanoi_affter.jpg", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/3603?fromList=true&menuId=617&tc=cafe_article_list", title: "투어 현장 3" },
-              { img: "/korean-guide//hanoi.jpg", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/2667?fromList=true&menuId=617&tc=cafe_article_list", title: "투어 현장 4" },
+              { img: "/korean-guide/hanoi.jpg", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/2667?fromList=true&menuId=617&tc=cafe_article_list", title: "투어 현장 4" },
             ].map((item, idx) => (
               <a
                 key={idx}
