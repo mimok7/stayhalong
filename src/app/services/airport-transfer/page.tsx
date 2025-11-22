@@ -1,239 +1,214 @@
 "use client";
 
-export default function AirportTransferPage() {
+import Link from "next/link";
 
+export default function AirportTransferPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-gradient-to-r from-orange-900 via-orange-700 to-red-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold mb-2">공항, 렌트카 서비스</h1>
-          
-            <p className="text-sm text-orange-100">다양한 렌트카 서비스 와 안전하고 신속한 공항 픽업/샌딩 서비스를 제공합니다.</p>
+    <div className="min-h-screen bg-slate-50 font-sans">
+      {/* Header */}
+      <header className="relative bg-slate-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop')] bg-cover bg-center opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-900/90"></div>
+
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 bg-orange-500/20 backdrop-blur-md border border-orange-400/30 text-orange-100 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <span>🚗</span>
+            <span>Premium Transport</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">공항 픽업 & 렌트카</h1>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            안전하고 편안한 이동을 위한 프리미엄 차량 서비스를 제공합니다.
+          </p>
         </div>
       </header>
 
-      {/* Airport Images Gallery */}
-      <section className="bg-white py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-              <img
-                src="/airport_01.gif"
-                alt="공항 픽업 서비스 이미지 1"
-                className="w-full h-auto min-h-64 object-contain hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-4">
-                <p className="text-center text-gray-700 font-medium">공항 픽업 서비스</p>
-              </div>
-            </div>
-            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-              <img
-                src="/airport_03.gif"
-                alt="공항 픽업 서비스 이미지 3"
-                className="w-full h-auto min-h-64 object-contain hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-4">
-                <p className="text-center text-gray-700 font-medium">전문 기사 서비스</p>
-              </div>
-            </div>
-            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
-              <img
-                src="/airport_04.gif"
-                alt="공항 픽업 서비스 이미지 4"
-                className="w-full h-auto min-h-64 object-contain hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-4">
-                <p className="text-center text-gray-700 font-medium">안전한 이동 서비스</p>
-              </div>
-            </div>
+      {/* Breadcrumb */}
+      <div className="bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center gap-2 text-sm text-slate-500">
+            <Link href="/" className="hover:text-brand-600 transition-colors">Home</Link>
+            <span>›</span>
+            <span className="text-slate-900 font-medium">Airport Transfer</span>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Additional Airport Gallery */}
-      <section className="bg-white rounded-2xl shadow-lg pt-4 pb-8 px-8 mt-8">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">공항 렌트카 상세 서비스 연결</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/8609?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="/airport/airport_01.gif" alt="공항 이미지 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
-              </div>
-            </a>
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-6 py-12">
 
-            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7546?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="/airport/3.png" alt="공항 이미지 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+        {/* Service Highlights */}
+        <section className="grid md:grid-cols-3 gap-8 mb-16">
+          {[
+            { img: "/airport_01.gif", title: "공항 픽업 서비스", desc: "공항에서 호텔까지 편안하게" },
+            { img: "/airport_03.gif", title: "전문 기사 서비스", desc: "베테랑 기사의 안전 운행" },
+            { img: "/airport_04.gif", title: "안전한 이동 서비스", desc: "최신 차량으로 쾌적하게" },
+          ].map((item, idx) => (
+            <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 group hover:shadow-xl transition-all duration-300">
+              <div className="aspect-video bg-slate-100 overflow-hidden relative">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
               </div>
-            </a>
+              <div className="p-6 text-center">
+                <h3 className="font-bold text-slate-900 text-lg mb-2">{item.title}</h3>
+                <p className="text-slate-500 text-sm">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </section>
 
-            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7545?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="/airport/1.png" alt="공항 이미지 3" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
-              </div>
-            </a>
-
-            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7544?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="/airport/2.png" alt="공항 이미지 4" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
-              </div>
-            </a>
-
-            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7542?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="/airport/1 (1).png" alt="공항 이미지 5" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
-              </div>
-            </a>
-
-            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7541?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="/airport/2 (1).png" alt="공항 이미지 6" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
-              </div>
-            </a>
-
-            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/6368?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="/airport/sha_limousine_01.gif" alt="공항 이미지 7" className="w-full h-full object-contain group-hover:scale-105 transition-transform" />
-              </div>
-            </a>
-
-            <a href="https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/5047?fromList=true&menuId=611&tc=cafe_article_list" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <img src="/airport/26.png" alt="공항 이미지 8" className="w-full h-full object-contain group-hover:scale-105 transition-transform" />
-              </div>
-            </a>
+        {/* Detailed Gallery */}
+        <section className="mb-16">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl font-bold text-slate-900">차량 서비스 상세</h2>
+            <p className="text-slate-500 text-sm">네이버 카페에서 상세 정보를 확인하세요</p>
           </div>
-        </div>
-      </section>
 
-      <main className="max-w-7xl mx-auto px-4 py-12">
-
-        {/* Reservation Guide */}
-        <section className="bg-white rounded-2xl shadow-lg p-8 mb-12">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">차량서비스 예약방법 안내</h3>
-          <p className="text-center text-gray-600 mb-8">GUIDE TO RESERVING RENT-CAR with DRIVER SERVICE</p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">1</span>
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">예약과정에 대한 안내</h4>
-              <ul className="text-sm text-gray-600 space-y-2 text-left">
-                <li>• 아래 &quot;예약하기&quot; 버튼을 눌러 &quot;스테이하롱&quot; 담당자에게 &quot;차량 서비스 신청&quot;을 요청해 주세요.</li>
-                <li>• 담당자가 &quot;신청서&quot; 작성을 위한 URL 링크를 전달 드립니다.</li>
-                <li>• 신청서 작성을 완료하시면 &quot;신청내용&quot;을 확인하여 최종 금액을 안내 드립니다.</li>
-              </ul>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">2</span>
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">결제방법에 대한 안내</h4>
-              <ul className="text-sm text-gray-600 space-y-2 text-left">
-                <li>• 차량 서비스는 최소의 당사 이익금 1% ~ 2%만 포함되므로 &quot;원화 송금&quot; 결제만 가능합니다.</li>
-                <li>• 부득이 &quot;신용카드&quot;결제로 결제를 원하시는 경우는 3.1%의 카드 수수료가 추가발생 합니다.</li>
-                <li>• 트래블월릿 등을 통한 &quot;베트남 동&quot; 송금은 가능 합니다.</li>
-              </ul>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-red-600">3</span>
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">상품의 취소규정 안내</h4>
-              <ul className="text-sm text-gray-600 space-y-2 text-left">
-                <li>• 예약의 취소는 차량 이용일 5일 전까지만 가능합니다.</li>
-                <li>• 이용일자 6일 전부터 15일전 사이 취소시에는 위약금 10%가 발생합니다.</li>
-                <li>• 이용일자 16일 전부터는 무료취소가 가능합니다. (전액환불)</li>
-                <li>• 차량승차일까지 5일 이내가 남은 경우는 취소 및 환불이 불가 합니다.</li>
-              </ul>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {[
+              { img: "/airport/airport_01.gif", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/8609?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 1" },
+              { img: "/airport/3.png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7546?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 2" },
+              { img: "/airport/1.png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7545?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 3" },
+              { img: "/airport/2.png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7544?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 4" },
+              { img: "/airport/1 (1).png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7542?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 5" },
+              { img: "/airport/2 (1).png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/7541?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 6" },
+              { img: "/airport/sha_limousine_01.gif", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/6368?fromList=true&menuId=611&tc=cafe_article_list", title: "리무진 서비스" },
+              { img: "/airport/26.png", link: "https://m.cafe.naver.com/ca-fe/web/cafes/31003053/articles/5047?fromList=true&menuId=611&tc=cafe_article_list", title: "차량 상세 8" },
+            ].map((item, idx) => (
+              <a
+                key={idx}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="aspect-square bg-slate-100 overflow-hidden relative">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                </div>
+              </a>
+            ))}
           </div>
         </section>
 
-        {/* Fast Track Images Gallery removed per request */}
+        {/* Booking Guide */}
+        <section className="bg-white rounded-3xl shadow-lg p-8 md:p-12 border border-slate-100 mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">예약 및 이용 안내</h2>
+            <p className="text-slate-600">간편하게 예약하고 안전하게 이용하세요</p>
+          </div>
 
-        {/* Contact CTA */}
-        <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold mb-4">지금 바로 예약하세요</h3>
-          <p className="text-orange-100 mb-6">
-            스테이하롱의 안전하고 편안한 공항 픽업/샌딩 서비스를 경험해보세요
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="http://pf.kakao.com/_zvsxaG/chat"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-orange-600 px-8 py-3 rounded-xl font-bold hover:bg-orange-50 transition-colors"
-            >
-              💬 카카오톡 예약 상담
-            </a>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition-colors">
-              📞 전화 문의: 070-4554-5185
-            </button>
+          <div className="grid md:grid-cols-3 gap-12 relative">
+            {/* Connecting Line (Desktop) */}
+            <div className="hidden md:block absolute top-8 left-[16%] right-[16%] h-0.5 bg-slate-100 -z-10"></div>
+
+            {[
+              {
+                step: "1",
+                title: "예약 신청",
+                desc: "카카오톡으로 담당자에게 차량 서비스를 신청해주세요. 신청서 링크를 보내드립니다.",
+                color: "bg-orange-50 text-orange-600 border-orange-100"
+              },
+              {
+                step: "2",
+                title: "결제 진행",
+                desc: "최종 금액 확인 후 원화 송금으로 결제합니다. (카드 결제 시 수수료 발생)",
+                color: "bg-blue-50 text-blue-600 border-blue-100"
+              },
+              {
+                step: "3",
+                title: "이용 및 취소",
+                desc: "이용일 5일 전까지 취소 가능하며, 16일 전 취소 시 전액 환불됩니다.",
+                color: "bg-green-50 text-green-600 border-green-100"
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="text-center relative bg-white p-4">
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold border ${item.color}`}>
+                  {item.step}
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Service Rules */}
-        <section className="grid lg:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <span className="text-blue-600">📥</span>
-              공항픽업 서비스 이용안내
+        {/* Detailed Rules */}
+        <section className="grid lg:grid-cols-2 gap-8 mb-16">
+          <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200">
+            <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+              <span className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-lg">📥</span>
+              공항 픽업 이용안내
             </h3>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-3">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>이용일자 3일 이내 시점부터는 예약이 불가 합니다.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>밤 22:00 이후 도착 항공편은 픽업서비스 제공이 불가 합니다.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>항공편 연착 시, 도착 시까지 기사님들이 무료 대기합니다.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>단, 00:00 이후 도착하게 될 경우, 공항픽업서비스는 취소 됩니다.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>예약 시 전액 &quot;원화송금&quot;으로 결제가 진행되므로, 기사님께 지불할 돈은 없습니다.</span>
-              </li>
+            <ul className="space-y-4">
+              {[
+                "이용일자 3일 전부터는 예약이 불가합니다.",
+                "밤 22:00 이후 도착 항공편은 픽업이 불가합니다.",
+                "항공편 연착 시, 도착 시까지 기사님이 무료 대기합니다.",
+                "00:00 이후 도착 시 픽업 서비스는 취소됩니다.",
+                "전액 선결제이므로 현장에서 지불할 금액은 없습니다."
+              ].map((rule, idx) => (
+                <li key={idx} className="flex items-start gap-3 text-slate-700 text-sm">
+                  <span className="text-blue-500 mt-1">•</span>
+                  <span>{rule}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <span className="text-green-600">📤</span>
-              공항샌딩 서비스 이용안내
+          <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200">
+            <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+              <span className="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-lg">📤</span>
+              공항 샌딩 이용안내
             </h3>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">•</span>
-                <span>이용일자 3일 이내 시점부터는 예약이 불가 합니다.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">•</span>
-                <span>밤 22:00 이후 승차의 경우 공항샌딩 서비스 제공이 불가 합니다.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">•</span>
-                <span>픽업시간 변경, 픽업위치 변경은 이용일 전날 저녁 18:00까지만 가능합니다.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">•</span>
-                <span>예약 시 전액 &quot;원화송금&quot;으로 결제가 진행되므로, 기사님께 지불할 돈은 없습니다.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">•</span>
-                <span>간혹 도로사정 등에 따라 차량이 10분 내외 지연도착 할 수 있습니다.</span>
-              </li>
+            <ul className="space-y-4">
+              {[
+                "이용일자 3일 전부터는 예약이 불가합니다.",
+                "밤 22:00 이후 승차 시 샌딩 서비스가 불가합니다.",
+                "픽업 시간/위치 변경은 이용 전일 18:00까지만 가능합니다.",
+                "도로 사정에 따라 차량이 10분 내외 지연될 수 있습니다.",
+                "전액 선결제이므로 현장에서 지불할 금액은 없습니다."
+              ].map((rule, idx) => (
+                <li key={idx} className="flex items-start gap-3 text-slate-700 text-sm">
+                  <span className="text-green-500 mt-1">•</span>
+                  <span>{rule}</span>
+                </li>
+              ))}
             </ul>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="bg-slate-900 rounded-3xl p-12 text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
+          <div className="relative z-10">
+            <h2 className="text-3xl font-bold text-white mb-4">지금 바로 예약하세요</h2>
+            <p className="text-slate-400 mb-8 max-w-xl mx-auto">
+              스테이하롱의 안전하고 편안한 공항 픽업/샌딩 서비스를 경험해보세요.
+              카카오톡으로 쉽고 빠르게 예약하실 수 있습니다.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="http://pf.kakao.com/_zvsxaG/chat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-brand-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-brand-700 transition-all shadow-lg hover:shadow-brand-500/25 flex items-center justify-center gap-2"
+              >
+                <span>💬</span>
+                <span>카카오톡 예약 상담</span>
+              </a>
+              <button className="bg-slate-800 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-700 transition-all border border-slate-700 flex items-center justify-center gap-2">
+                <span>📞</span>
+                <span>070-4554-5185</span>
+              </button>
+            </div>
           </div>
         </section>
       </main>

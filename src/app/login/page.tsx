@@ -17,7 +17,7 @@ export default function AdminLoginPage() {
     document.title = "관리자 로그인 | Stay Halong";
   }, []);
 
-  // 이미 로그인되어 있다면 DB 기반 권한 확인 후에만 /admin 이동 (즉시 로그아웃하지 않음)
+  // 이미 로그인되어 있다면 DB 기반 권한 확인 후에만 /admin 이동
   useEffect(() => {
     const checkUser = async () => {
       const { data: { user } } = await supabase.auth.getUser();
@@ -27,7 +27,6 @@ export default function AdminLoginPage() {
       if (role === 'admin' || role === 'manager') {
         router.push('/admin');
       }
-      // 권한이 아니면 로그인 화면에 그대로 둠 (관리자 레이아웃에서 접근 차단 처리)
     };
     checkUser();
   }, [router, supabase]);
@@ -45,56 +44,42 @@ export default function AdminLoginPage() {
 
       if (error) {
         setError('잘못된 이메일 또는 비밀번호입니다.');
-        console.error('Login error:', error);
       } else if (data.user) {
-        console.log('Login successful, user:', data.user);
-        console.log('User ID:', data.user.id);
-        console.log('User email:', data.user.email);
-
-        // users 테이블에서 사용자 권한 확인 (id 우선, email 폴백)
         const userRole = await checkUserRole({ id: data.user.id, email: data.user.email ?? undefined });
-        console.log('Resolved user role:', userRole);
 
         if (userRole === 'admin' || userRole === 'manager') {
-          console.log('User has admin/manager role, redirecting to /admin');
-          // 관리자 권한이 있는 경우에만 로그인 성공
           router.push('/admin');
         } else {
-          console.log('User does not have admin/manager role');
-          // 권한이 없는 경우 로그아웃 처리
           await supabase.auth.signOut();
-          setError(`관리자 권한이 없습니다. 현재 권한: ${userRole || '없음'}`);
+          setError(`관리자 권한이 없습니다.`);
         }
       }
     } catch (err) {
       setError('로그인 중 오류가 발생했습니다.');
-      console.error('Login error:', err);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
-        <div>
-          <div className="mx-auto h-12 w-12 flex items-center justify-center rounded-full bg-blue-100">
-            <svg className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
+    <div className="min-h-screen bg-slate-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+        <div className="text-center">
+          <div className="mx-auto h-14 w-14 flex items-center justify-center rounded-2xl bg-brand-50 text-brand-600 text-2xl font-bold mb-6">
+            S
           </div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
             관리자 로그인
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            하롱베이 크루즈 관리 시스템
+          <p className="mt-2 text-sm text-slate-500">
+            Stay Halong 관리 시스템에 접속합니다
           </p>
         </div>
 
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="rounded-md shadow-sm -space-y-px">
+          <div className="space-y-4">
             <div>
-              <label htmlFor="email" className="sr-only">
+              <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
                 이메일
               </label>
               <input
@@ -102,14 +87,14 @@ export default function AdminLoginPage() {
                 name="email"
                 type="email"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                placeholder="이메일 주소"
+                className="appearance-none block w-full px-4 py-3 border border-slate-200 rounded-xl placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                placeholder="admin@stayhalong.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
-              <label htmlFor="password" className="sr-only">
+              <label htmlFor="password" className="block text-sm font-medium text-slate-700 mb-1">
                 비밀번호
               </label>
               <input
@@ -117,8 +102,8 @@ export default function AdminLoginPage() {
                 name="password"
                 type="password"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                placeholder="비밀번호"
+                className="appearance-none block w-full px-4 py-3 border border-slate-200 rounded-xl placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -126,36 +111,26 @@ export default function AdminLoginPage() {
           </div>
 
           {error && (
-            <div className="rounded-md bg-red-50 p-4">
-              <div className="flex">
-                <div className="ml-3">
-                  <h3 className="text-sm font-medium text-red-800">
-                    로그인 실패
-                  </h3>
-                  <div className="mt-2 text-sm text-red-700">
-                    {error}
-                  </div>
-                </div>
-              </div>
+            <div className="rounded-xl bg-red-50 p-4 flex items-start gap-3">
+              <div className="flex-shrink-0 text-red-400">⚠️</div>
+              <div className="text-sm text-red-700 font-medium">{error}</div>
             </div>
           )}
 
-          <div>
-            <button
-              type="submit"
-              disabled={loading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {loading ? (
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-              ) : (
-                '로그인'
-              )}
-            </button>
-          </div>
+          <button
+            type="submit"
+            disabled={loading}
+            className="group relative w-full flex justify-center py-3.5 px-4 border border-transparent text-sm font-bold rounded-xl text-white bg-brand-600 hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 hover:-translate-y-0.5"
+          >
+            {loading ? (
+              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+            ) : (
+              '로그인'
+            )}
+          </button>
         </form>
       </div>
     </div>
