@@ -86,33 +86,20 @@ export default function HomePage() {
             >
               카카오톡 상담하기
             </a>
+            <a
+              href="https://cafe.naver.com/stayhalong"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded-xl bg-[#03C75A] hover:bg-[#02b351] text-white font-semibold text-lg transition-all shadow-lg shadow-green-900/20 hover:shadow-green-900/40 hover:-translate-y-0.5"
+            >
+              네이버 카페
+            </a>
             <Link
               href="/cruises"
               className="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold text-lg transition-all hover:-translate-y-0.5"
             >
               크루즈 찾아보기
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats / Trust Section */}
-      <section className="py-12 border-b border-slate-100 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-100">
-            {[
-              { label: "누적 여행객", value: "4,300+", icon: "👥" },
-              { label: "고객 만족도", value: "4.9/5.0", icon: "⭐" },
-              { label: "현지 파트너", value: "50+", icon: "🤝" },
-              { label: "운영 기간", value: "Since 2015", icon: "📅" },
-            ].map((stat, idx) => (
-              <div key={idx} className="p-4">
-                <div className="text-3xl font-bold text-slate-900 mb-2">{stat.value}</div>
-                <div className="text-sm text-slate-500 font-medium flex items-center justify-center gap-2">
-                  <span>{stat.icon}</span> {stat.label}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
