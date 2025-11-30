@@ -45,6 +45,7 @@ export default function Header() {
           {/* 데스크톱 네비게이션 메뉴 */}
           <nav className="hidden md:flex items-center gap-8">
             {[
+              { name: "NEW", href: "https://new.stayhalong.com" },
               { name: "크루즈", href: "/cruises" },
               { name: "앱시트신청", href: "https://form.stayhalong.com/" },
               { name: "자료관리", href: "https://form.stayhalong.com/admin" },
@@ -69,11 +70,21 @@ export default function Header() {
           </nav>
 
           {/* 모바일 메뉴 버튼 (간소화) */}
-          <div className="md:hidden flex items-center gap-3">
+          <div className="md:hidden flex items-center gap-2">
+            <Link
+              href="https://new.stayhalong.com"
+              target="_blank"
+              className={`text-xs font-bold px-3 py-2 rounded-lg transition-colors ${scrolled || !isHome
+                  ? "bg-purple-600 text-white hover:bg-purple-700"
+                  : "bg-white text-purple-600 hover:bg-purple-50"
+                }`}
+            >
+              NEW
+            </Link>
             <Link
               href="https://customer.stayhalong.com"
               target="_blank"
-              className={`text-xs font-bold px-4 py-2 rounded-lg transition-colors ${scrolled || !isHome
+              className={`text-xs font-bold px-3 py-2 rounded-lg transition-colors ${scrolled || !isHome
                   ? "bg-brand-600 text-white hover:bg-brand-700"
                   : "bg-white text-brand-600 hover:bg-slate-100"
                 }`}
