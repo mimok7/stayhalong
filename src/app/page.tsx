@@ -51,7 +51,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-brand-100 selection:text-brand-900">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-brand-100 selection:text-brand-900 pt-20">
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden bg-slate-900">
         {/* Background Image with Overlay */}
