@@ -14,7 +14,7 @@ export default function AdminLoginPage() {
 
   // 페이지 타이틀 설정
   useEffect(() => {
-    document.title = "관리자 로그인 | Stay Halong";
+    document.title = "로그인 | Stay Halong";
   }, []);
 
   // 이미 로그인되어 있다면 DB 기반 권한 확인 후에만 /admin 이동
@@ -69,7 +69,7 @@ export default function AdminLoginPage() {
             S
           </div>
           <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
-            관리자 로그인
+            로그인
           </h2>
           <p className="mt-2 text-sm text-slate-500">
             Stay Halong 관리 시스템에 접속합니다

@@ -25,9 +25,9 @@ export default function NewHomeHeader() {
                 </div>
                 {/* index_06: 154px - Login */}
                 <div style={{ flex: '154 154 0%' }}>
-                    <a href="https://customer.stayhalong.com/login" target="_blank" rel="noopener noreferrer">
+                    <Link href="/login">
                         <img src="/images/index_06.gif" width="154" height="196" alt="Login" className="block w-full h-auto cursor-pointer" />
-                    </a>
+                    </Link>
                 </div>
                 {/* index_07: 257px - Kakao Chat */}
                 <div style={{ flex: '257 257 0%' }}>
