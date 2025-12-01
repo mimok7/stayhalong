@@ -21,8 +21,8 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || !isHome
-        ? "bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm py-3"
-        : "bg-transparent py-5"
+        ? "bg-white/40 backdrop-blur-md border-b border-slate-200/50 shadow-sm py-1"
+        : "bg-transparent py-1"
         }`}
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -32,7 +32,7 @@ export default function Header() {
             href="/"
             className="flex items-center group"
           >
-            <div className="relative w-32 h-16">
+            <div className="relative w-48 h-20">
               <Image
                 src="/logosht.png"
                 alt="Stay Halong Logo"
@@ -48,7 +48,7 @@ export default function Header() {
             href="https://customer.stayhalong.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-bold text-base rounded-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+            className="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm rounded-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
           >
             예약하기
           </Link>
