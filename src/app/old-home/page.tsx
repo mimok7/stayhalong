@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
-import { getUniqueCategories, getAllCruiseInfos } from "../data/cruises";
+import { getUniqueCategories, getAllCruiseInfos } from "../../data/cruises";
 
 export default function HomePage() {
   // 페이지 타이틀 설정
