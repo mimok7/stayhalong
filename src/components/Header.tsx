@@ -17,11 +17,14 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Hide global header on new home page (root)
+  if (pathname === "/") return null;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || !isHome
-          ? "bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm py-3"
-          : "bg-transparent py-5"
+        ? "bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm py-3"
+        : "bg-transparent py-5"
         }`}
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -58,10 +61,10 @@ export default function Header() {
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className={`text-sm font-medium transition-all hover:-translate-y-0.5 ${pathname === item.href
-                    ? "text-brand-600 font-bold"
-                    : scrolled || !isHome
-                      ? "text-slate-600 hover:text-brand-600"
-                      : "text-slate-200 hover:text-white"
+                  ? "text-brand-600 font-bold"
+                  : scrolled || !isHome
+                    ? "text-slate-600 hover:text-brand-600"
+                    : "text-slate-200 hover:text-white"
                   }`}
               >
                 {item.name}
@@ -74,8 +77,8 @@ export default function Header() {
             <Link
               href="/new-home"
               className={`text-xs font-bold px-3 py-2 rounded-lg transition-colors ${scrolled || !isHome
-                  ? "bg-purple-600 text-white hover:bg-purple-700"
-                  : "bg-white text-purple-600 hover:bg-purple-50"
+                ? "bg-purple-600 text-white hover:bg-purple-700"
+                : "bg-white text-purple-600 hover:bg-purple-50"
                 }`}
             >
               NEW
@@ -84,8 +87,8 @@ export default function Header() {
               href="https://customer.stayhalong.com"
               target="_blank"
               className={`text-xs font-bold px-3 py-2 rounded-lg transition-colors ${scrolled || !isHome
-                  ? "bg-brand-600 text-white hover:bg-brand-700"
-                  : "bg-white text-brand-600 hover:bg-slate-100"
+                ? "bg-brand-600 text-white hover:bg-brand-700"
+                : "bg-white text-brand-600 hover:bg-slate-100"
                 }`}
             >
               예약하기
