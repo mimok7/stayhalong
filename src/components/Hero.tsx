@@ -29,7 +29,7 @@ export default function Hero({
             rel="noopener noreferrer"
             className="bg-yellow-400 text-yellow-800 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-lg inline-block text-center"
           >
-            💬 카카오톡 상담하기
+            💬 카카오톡 상담
           </a>
           <a
             href="https://cafe.naver.com/stayhalong"

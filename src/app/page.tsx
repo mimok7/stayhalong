@@ -84,7 +84,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-lg transition-all shadow-lg shadow-brand-900/20 hover:shadow-brand-900/40 hover:-translate-y-0.5"
             >
-              카카오톡 상담하기
+              카카오톡 상담
             </a>
             <a
               href="https://cafe.naver.com/stayhalong"
@@ -93,6 +93,14 @@ export default function HomePage() {
               className="px-8 py-4 rounded-xl bg-[#03C75A] hover:bg-[#02b351] text-white font-semibold text-lg transition-all shadow-lg shadow-green-900/20 hover:shadow-green-900/40 hover:-translate-y-0.5"
             >
               네이버 카페
+            </a>
+            <a
+              href="https://www.youtube.com/@Realhalong"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded-xl bg-[#FF0000] hover:bg-[#CC0000] text-white font-semibold text-lg transition-all shadow-lg shadow-red-900/20 hover:shadow-red-900/40 hover:-translate-y-0.5"
+            >
+              SHT YOUTUBE
             </a>
             <Link
               href="/cruises"
@@ -287,7 +295,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="px-8 py-4 bg-yellow-400 hover:bg-yellow-300 text-yellow-950 rounded-xl font-bold text-lg transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2"
             >
-              <span>💬</span> 카카오톡 상담하기
+              <span>💬</span> 카카오톡 상담
             </a>
             <a
               href="https://customer.stayhalong.com/"
