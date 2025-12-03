@@ -62,27 +62,27 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-20 max-w-5xl mx-auto px-6 text-center text-white">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium mb-8 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm font-medium mb-6 md:mb-8 animate-fade-in-up">
             <span className="text-brand-300">✨</span>
             <span>하롱베이 현지 전문 유일 한국인 여행사</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-8 animate-fade-in-up delay-100">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-tight mb-6 md:mb-8 animate-fade-in-up delay-100">
             Discover the Beauty of <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-white">Halong Bay</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up delay-200">
+          <p className="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed animate-fade-in-up delay-200">
             스테이하롱은 베트남 현지 법인 여행사로, <br className="hidden md:block" />
             가장 안전하고 특별한 하롱베이 여행을 약속드립니다.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-fade-in-up delay-300">
             <a
               href="http://pf.kakao.com/_zvsxaG/chat"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-lg transition-all shadow-lg shadow-brand-900/20 hover:shadow-brand-900/40 hover:-translate-y-0.5"
+              className="w-56 flex justify-center items-center py-2.5 md:py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-white font-semibold text-lg transition-all shadow-lg shadow-brand-900/20 hover:shadow-brand-900/40 hover:-translate-y-0.5"
             >
               카카오톡 상담
             </a>
@@ -90,7 +90,7 @@ export default function HomePage() {
               href="https://cafe.naver.com/stayhalong"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-xl bg-[#03C75A] hover:bg-[#02b351] text-white font-semibold text-lg transition-all shadow-lg shadow-green-900/20 hover:shadow-green-900/40 hover:-translate-y-0.5"
+              className="w-56 flex justify-center items-center py-2.5 md:py-3 rounded-xl bg-green-500 hover:bg-green-400 text-white font-semibold text-lg transition-all shadow-lg shadow-green-900/20 hover:shadow-green-900/40 hover:-translate-y-0.5"
             >
               네이버 카페
             </a>
@@ -98,13 +98,13 @@ export default function HomePage() {
               href="https://www.youtube.com/@Realhalong"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-xl bg-[#FF0000] hover:bg-[#CC0000] text-white font-semibold text-lg transition-all shadow-lg shadow-red-900/20 hover:shadow-red-900/40 hover:-translate-y-0.5"
+              className="w-56 flex justify-center items-center py-2.5 md:py-3 rounded-xl bg-red-500 hover:bg-red-400 text-white font-semibold text-lg transition-all shadow-lg shadow-red-900/20 hover:shadow-red-900/40 hover:-translate-y-0.5"
             >
               SHT YOUTUBE
             </a>
             <Link
               href="/cruises"
-              className="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold text-lg transition-all hover:-translate-y-0.5"
+              className="w-56 flex justify-center items-center py-2.5 md:py-3 rounded-xl bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/20 text-white font-semibold text-lg transition-all hover:-translate-y-0.5"
             >
               크루즈 찾아보기
             </Link>
@@ -288,12 +288,12 @@ export default function HomePage() {
             <br />부담 없이 문의해주세요.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="http://pf.kakao.com/_zvsxaG/chat"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-yellow-400 hover:bg-yellow-300 text-yellow-950 rounded-xl font-bold text-lg transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2"
+              className="w-56 flex justify-center items-center py-2.5 md:py-3 bg-yellow-300 hover:bg-yellow-200 text-yellow-950 rounded-xl font-bold text-lg transition-all shadow-lg hover:-translate-y-1 gap-2"
             >
               <span>💬</span> 카카오톡 상담
             </a>
@@ -301,7 +301,7 @@ export default function HomePage() {
               href="https://customer.stayhalong.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-white hover:bg-slate-50 text-brand-600 rounded-xl font-bold text-lg transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2"
+              className="w-56 flex justify-center items-center py-2.5 md:py-3 bg-white/90 hover:bg-white text-brand-600 rounded-xl font-bold text-lg transition-all shadow-lg hover:-translate-y-1 gap-2"
             >
               <span>📝</span> 간편 예약 신청
             </a>

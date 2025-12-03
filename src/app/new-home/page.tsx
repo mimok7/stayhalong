@@ -25,7 +25,7 @@ export default function HomePage() {
       id: "airport",
       title: "공항 픽업/샌딩",
       subtitle: "Private Transfer",
-      description: "하노이 공항에서 하롱베이까지 안전하고 편안하게",
+      description: "노이바이 공항에서 하노이, 하롱베이까지 안전하고 편안하게",
       icon: "🚗",
       href: "/services/airport-transfer",
       features: ["전용 차량", "한국어 가이드", "24시간 서비스"]
