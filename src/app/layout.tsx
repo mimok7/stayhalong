@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@mantine/core/styles.css";
+import "@mantine/carousel/styles.css";
+import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from "@mantine/core";
 import { PWAProvider } from "./components/PWAProvider";
 import Header from "../components/Header";
 
@@ -60,8 +63,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" {...mantineHtmlProps}>
       <head>
+        <ColorSchemeScript />
         <meta name="theme-color" content="#2563eb" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -73,10 +77,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <PWAProvider>
-          <Header />
-          {children}
-        </PWAProvider>
+        <MantineProvider>
+          <PWAProvider>
+            <Header />
+            {children}
+          </PWAProvider>
+        </MantineProvider>
       </body>
     </html>
   );
