@@ -1,6 +1,5 @@
 import { BackgroundImage, Container, Title, Text, Overlay, Box, Button, Group } from '@mantine/core';
 import { Calendar, CheckSquare } from 'lucide-react';
-import Link from 'next/link';
 
 export function MantineHero() {
     return (

@@ -1,9 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import Link from "next/link";
 import { useEffect } from "react";
-import { getUniqueCategories, getAllCruiseInfos } from "../data/cruises";
 
 export default function HomePage() {
   // 페이지 타이틀 설정

@@ -1,5 +1,5 @@
 import { Carousel } from '@mantine/carousel';
-import { Paper, Text, Title, Container, useMantineTheme, Rating, Group, Avatar } from '@mantine/core';
+import { Paper, Text, Title, Container, Rating, Group, Avatar } from '@mantine/core';
 import '@mantine/carousel/styles.css';
 
 interface CardProps {
@@ -23,7 +23,7 @@ function Card({ name, rating, content, tag }: CardProps) {
                 <Text c="dimmed" size="xs">{tag}</Text>
             </Group>
             <Text size="md" mt="sm" mb="xl" style={{ minHeight: '80px' }}>
-                "{content}"
+                &quot;{content}&quot;
             </Text>
             <Group>
                 <Avatar color="blue" radius="xl">{name.charAt(0)}</Avatar>
@@ -69,9 +69,6 @@ export function MantineReviews() {
             <Carousel
                 slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
                 slideGap="md"
-                loop
-                align="start"
-                slidesToScroll={1}
             >
                 {data.map((item, index) => (
                     <Carousel.Slide key={index}>

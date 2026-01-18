@@ -1,5 +1,5 @@
 import { Container, Group, ActionIcon, Text, Stack } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
+import { IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
 import { MessageCircle } from 'lucide-react';
 
 export function MantineFooter() {
