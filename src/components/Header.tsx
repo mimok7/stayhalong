@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { MessageCircle, Coffee, Youtube } from "lucide-react";
 
 export default function Header() {
   const pathname = usePathname();
@@ -43,15 +44,36 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* 예약하기 버튼 */}
-          <Link
-            href="https://customer.stayhalong.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm rounded-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
-          >
-            예약하기
-          </Link>
+          {/* 소셜 링크 섹션 */}
+          <div className="flex items-center gap-3">
+            <a
+              href="http://pf.kakao.com/_zvsxaG/chat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-[#FEE500] hover:bg-[#FDB200] text-black font-bold text-[13px] rounded-full transition-all shadow-sm hover:shadow-md active:scale-95"
+            >
+              <MessageCircle size={16} />
+              <span className="hidden sm:inline">카톡상담</span>
+            </a>
+            <a
+              href="https://cafe.naver.com/stayhalong"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-[#03C75A] hover:bg-[#02b350] text-white font-bold text-[13px] rounded-full transition-all shadow-sm hover:shadow-md active:scale-95"
+            >
+              <Coffee size={16} />
+              <span className="hidden sm:inline">네이버카페</span>
+            </a>
+            <a
+              href="https://www.youtube.com/@Realhalong"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-[#FF0000] hover:bg-[#e60000] text-white font-bold text-[13px] rounded-full transition-all shadow-sm hover:shadow-md active:scale-95"
+            >
+              <Youtube size={16} />
+              <span className="hidden sm:inline">유튜브</span>
+            </a>
+          </div>
         </div>
       </div>
     </header>

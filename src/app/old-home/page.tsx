@@ -11,44 +11,6 @@ export default function HomePage() {
     document.title = "Stay Halong - 하롱베이 크루즈 여행";
   }, []);
 
-  const mainServices = [
-    {
-      id: "cruise",
-      title: "하롱베이 크루즈",
-      subtitle: "Premium Cruises",
-      description: "세계자연유산 하롱베이에서 즐기는 프리미엄 크루즈 여행",
-      icon: "🚢",
-      href: "/cruises",
-      features: ["럭셔리 크루즈", "부티크 크루즈", "데이 크루즈"]
-    },
-    {
-      id: "airport",
-      title: "공항 픽업/샌딩",
-      subtitle: "Private Transfer",
-      description: "하노이 공항에서 하롱베이까지 안전하고 편안하게",
-      icon: "🚗",
-      href: "/services/airport-transfer",
-      features: ["전용 차량", "한국어 가이드", "24시간 서비스"]
-    },
-    {
-      id: "guide",
-      title: "한국어 가이드 투어",
-      subtitle: "Local Guide",
-      description: "베트남 현지 전문가와 함께하는 맞춤형 여행",
-      icon: "👨‍🏫",
-      href: "/services/korean-guide",
-      features: ["전문 가이드", "맞춤형 일정", "문화 체험"]
-    },
-    {
-      id: "hotel",
-      title: "베트남 호텔 예약",
-      subtitle: "Hotel Booking",
-      description: "엄선된 베트남 호텔 최적가 예약 및 추천",
-      icon: "🏨",
-      href: "/services/hotels",
-      features: ["최적가 보장", "실시간 예약", "한국어 지원"]
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-brand-100 selection:text-brand-900">
@@ -77,88 +39,28 @@ export default function HomePage() {
             가장 안전하고 특별한 하롱베이 여행을 약속드립니다.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-300">
             <a
-              href="http://pf.kakao.com/_zvsxaG/chat"
+              href="https://customer.stayhalong.com/login?next=/mypage/direct-booking"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-lg transition-all shadow-lg shadow-brand-900/20 hover:shadow-brand-900/40 hover:-translate-y-0.5"
+              className="w-56 flex justify-center items-center py-3 md:py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-xl transition-all shadow-lg hover:-translate-y-1"
             >
-              카카오톡 상담하기
+              예약하기
             </a>
             <a
-              href="https://cafe.naver.com/stayhalong"
+              href="https://customer.stayhalong.com/login?next=/mypage/reservations/list"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-xl bg-[#03C75A] hover:bg-[#02b351] text-white font-semibold text-lg transition-all shadow-lg shadow-green-900/20 hover:shadow-green-900/40 hover:-translate-y-0.5"
+              className="w-56 flex justify-center items-center py-3 md:py-4 rounded-xl bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-white font-bold text-xl transition-all hover:-translate-y-1"
             >
-              네이버 카페
+              예약확인
             </a>
-            <Link
-              href="/cruises"
-              className="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold text-lg transition-all hover:-translate-y-0.5"
-            >
-              크루즈 찾아보기
-            </Link>
           </div>
+
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Premium Services
-            </h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              단순한 여행이 아닌, 평생 기억에 남을 특별한 경험을 선사합니다.
-              <br />스테이하롱만의 차별화된 서비스를 만나보세요.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {mainServices.map((service) => (
-              <Link
-                key={service.id}
-                href={service.href}
-                className="group relative bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 group-hover:scale-110 transition-all duration-500 text-9xl select-none pointer-events-none grayscale">
-                  {service.icon}
-                </div>
-
-                <div className="relative z-10">
-                  <div className="w-14 h-14 bg-brand-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
-                  </div>
-
-                  <div className="text-sm font-bold text-brand-600 mb-2 tracking-wider uppercase">
-                    {service.subtitle}
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-brand-700 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-slate-600 mb-8 leading-relaxed min-h-[3rem]">
-                    {service.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {service.features.map((feature, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-lg text-sm font-medium group-hover:bg-brand-50 group-hover:text-brand-700 transition-colors"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Why Choose Us */}
       <section className="py-24 bg-white">

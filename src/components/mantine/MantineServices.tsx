@@ -34,32 +34,5 @@ const services = [
 ];
 
 export function MantineServices() {
-    return (
-        <Container size="lg" py={80} id="services">
-            <Title order={2} ta="center" mt="sm" mb={50}>
-                Our Premium Services
-            </Title>
-            <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={30}>
-                {services.map((feature) => (
-                    <Card key={feature.title} shadow="sm" radius="md" padding="xl" component={Link} href={feature.href} withBorder style={{ transition: 'transform 200ms ease, box-shadow 200ms ease' }} className="hover:scale-[1.02] hover:shadow-lg">
-                        <ThemeIcon
-                            size={50}
-                            radius={50}
-                            variant="light"
-                            color={feature.color}
-                            mb="md"
-                        >
-                            <feature.icon size={26} />
-                        </ThemeIcon>
-                        <Text fz="lg" fw={700} mt="md" mb="xs">
-                            {feature.title}
-                        </Text>
-                        <Text c="dimmed" fz="sm">
-                            {feature.description}
-                        </Text>
-                    </Card>
-                ))}
-            </SimpleGrid>
-        </Container>
-    );
+    return null;
 }

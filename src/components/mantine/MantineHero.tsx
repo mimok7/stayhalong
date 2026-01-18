@@ -1,5 +1,6 @@
-import { BackgroundImage, Container, Title, Text, Button, Group, Overlay, Box } from '@mantine/core';
-import { Calendar, Coffee, MessageCircle, Youtube } from 'lucide-react';
+import { BackgroundImage, Container, Title, Text, Overlay, Box, Button, Group } from '@mantine/core';
+import { Calendar, CheckSquare } from 'lucide-react';
+import Link from 'next/link';
 
 export function MantineHero() {
     return (
@@ -43,47 +44,29 @@ export function MantineHero() {
                             <Button
                                 size="xl"
                                 radius="xl"
-                                color="yellow"
-                                c="dark"
-                                leftSection={<MessageCircle size={20} />}
+                                color="blue"
+                                leftSection={<Calendar size={20} />}
                                 component="a"
-                                href="http://pf.kakao.com/_zvsxaG/chat"
+                                href="https://customer.stayhalong.com/login?next=/mypage/direct-booking"
                                 target="_blank"
+                                fw={700}
+                                px={40}
                             >
-                                카카오톡 상담
-                            </Button>
-                            <Button
-                                size="xl"
-                                radius="xl"
-                                color="green"
-                                leftSection={<Coffee size={20} />}
-                                component="a"
-                                href="https://cafe.naver.com/stayhalong"
-                                target="_blank"
-                            >
-                                네이버 카페
-                            </Button>
-                            <Button
-                                size="xl"
-                                radius="xl"
-                                color="red"
-                                leftSection={<Youtube size={20} />}
-                                component="a"
-                                href="https://www.youtube.com/@Realhalong"
-                                target="_blank"
-                            >
-                                SHT YOUTUBE
+                                예약하기
                             </Button>
                             <Button
                                 size="xl"
                                 radius="xl"
                                 variant="white"
                                 color="dark"
-                                leftSection={<Calendar size={20} />}
+                                leftSection={<CheckSquare size={20} />}
                                 component="a"
-                                href="#services"
+                                href="https://customer.stayhalong.com/login?next=/mypage/reservations/list"
+                                target="_blank"
+                                fw={700}
+                                px={40}
                             >
-                                예약 서비스 보기
+                                예약확인
                             </Button>
                         </Group>
                     </Box>
