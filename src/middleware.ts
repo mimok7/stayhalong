@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
 
-export function middleware(_request: NextRequest) {
+
+export function middleware() {
   // 기본 미들웨어 - 아무 작업도 하지 않음
   return NextResponse.next()
 }

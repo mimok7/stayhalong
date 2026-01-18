@@ -86,7 +86,7 @@ function CruiseEditForm() {
           text: "크루즈 정보를 불러올 수 없습니다."
         });
       }
-    } catch (_error) {
+    } catch {
       setSubmitMessage({
         type: "error",
         text: "데이터 로딩 중 오류가 발생했습니다."
@@ -125,7 +125,7 @@ function CruiseEditForm() {
         const result = await response.json();
         setSubmitMessage({
           type: "success",
-          text: cruiseId 
+          text: cruiseId
             ? "크루즈 정보가 성공적으로 수정되었습니다."
             : `크루즈 정보가 성공적으로 저장되었습니다. (ID: ${result.id})`
         });
@@ -145,7 +145,7 @@ function CruiseEditForm() {
           text: error.error || "저장 중 오류가 발생했습니다."
         });
       }
-    } catch (_error) {
+    } catch {
       setSubmitMessage({
         type: "error",
         text: "네트워크 오류가 발생했습니다."
@@ -157,12 +157,12 @@ function CruiseEditForm() {
 
   const generateRoomUrl = () => {
     if (formData.category && formData.cruiseName && formData.roomName) {
-      const categorySlug = formData.category === "1박2일" ? "1-night-2-days" : 
-                           formData.category === "2박3일" ? "2-nights-3-days" : "day-cruises";
+      const categorySlug = formData.category === "1박2일" ? "1-night-2-days" :
+        formData.category === "2박3일" ? "2-nights-3-days" : "day-cruises";
       const cruiseSlug = formData.cruiseName.toLowerCase().replace(/\s+/g, "-");
       const roomSlug = formData.roomName.toLowerCase().replace(/\s+/g, "-");
       const url = `/cruises/${categorySlug}/${cruiseSlug}/${roomSlug}`;
-      
+
       setFormData(prev => ({
         ...prev,
         roomUrl: url
@@ -223,7 +223,7 @@ function CruiseEditForm() {
                 <span className="text-blue-600">🚢</span>
                 기본 정보
               </h2>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-2">
@@ -283,7 +283,7 @@ function CruiseEditForm() {
                 <span className="text-green-600">🏨</span>
                 객실 정보
               </h2>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="roomName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -374,11 +374,10 @@ function CruiseEditForm() {
 
             {/* 저장 메시지 */}
             {submitMessage && (
-              <div className={`p-4 rounded-lg ${
-                submitMessage.type === "success" 
-                  ? "bg-green-50 text-green-700 border border-green-200" 
+              <div className={`p-4 rounded-lg ${submitMessage.type === "success"
+                  ? "bg-green-50 text-green-700 border border-green-200"
                   : "bg-red-50 text-red-700 border border-red-200"
-              }`}>
+                }`}>
                 <div className="flex items-center gap-2">
                   <span className="text-lg">
                     {submitMessage.type === "success" ? "✅" : "❌"}

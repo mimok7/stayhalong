@@ -35,7 +35,7 @@ export default function CruiseListPage() {
       } else {
         setError("데이터를 불러오는데 실패했습니다.");
       }
-    } catch (_err) {
+    } catch {
       setError("네트워크 오류가 발생했습니다.");
     } finally {
       setLoading(false);
@@ -78,7 +78,7 @@ export default function CruiseListPage() {
       } else {
         alert("삭제에 실패했습니다.");
       }
-    } catch (_err) {
+    } catch {
       alert("삭제 중 오류가 발생했습니다.");
     }
   };
@@ -217,9 +217,9 @@ export default function CruiseListPage() {
                 <p className="text-2xl font-bold text-gray-900">
                   {cruises.length > 0
                     ? Math.round(cruises
-                        .filter(c => c.roomArea)
-                        .map(c => parseInt(c.roomArea?.replace(/[^\d]/g, '') || '0'))
-                        .reduce((a, b) => a + b, 0) /
+                      .filter(c => c.roomArea)
+                      .map(c => parseInt(c.roomArea?.replace(/[^\d]/g, '') || '0'))
+                      .reduce((a, b) => a + b, 0) /
                       cruises.filter(c => c.roomArea).length
                     ) + '㎡'
                     : '0㎡'

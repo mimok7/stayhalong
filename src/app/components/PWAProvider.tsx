@@ -18,14 +18,14 @@ export function PWAProvider({ children }: { children: React.ReactNode }) {
     }
 
     // PWA 설치 프롬프트 처리
-    let deferredPrompt: Event | null = null;
+    // let deferredPrompt: Event | null = null;
 
-    window.addEventListener('beforeinstallprompt', (e) => {
-      // Prevent the mini-infobar from appearing on mobile
-      e.preventDefault();
-      // Stash the event so it can be triggered later
-      deferredPrompt = e;
-    });
+    // window.addEventListener('beforeinstallprompt', (e) => {
+    //   // Prevent the mini-infobar from appearing on mobile
+    //   e.preventDefault();
+    //   // Stash the event so it can be triggered later
+    //   deferredPrompt = e;
+    // });
 
     // 앱이 설치되었을 때
     window.addEventListener('appinstalled', () => {

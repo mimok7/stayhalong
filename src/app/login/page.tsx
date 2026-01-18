@@ -54,7 +54,7 @@ export default function AdminLoginPage() {
           setError(`관리자 권한이 없습니다.`);
         }
       }
-    } catch (err) {
+    } catch {
       setError('로그인 중 오류가 발생했습니다.');
     } finally {
       setLoading(false);
