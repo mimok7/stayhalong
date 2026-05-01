@@ -39,7 +39,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-300">
             <a
-              href="https://customer.stayhalong.com/signup"
+              href="https://customer7.stayhalong.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="w-56 flex justify-center items-center py-3 md:py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-xl transition-all shadow-lg hover:-translate-y-1"
@@ -47,7 +47,7 @@ export default function HomePage() {
               신규예약
             </a>
             <a
-              href="https://customer.stayhalong.com/"
+              href="https://customer7.stayhalong.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-56 flex justify-center items-center py-3 md:py-4 rounded-xl bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-white font-bold text-xl transition-all hover:-translate-y-1"
